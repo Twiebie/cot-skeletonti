@@ -6,13 +6,13 @@
           <thead>
             <th>&nbsp;</th>
             <th>
-              <a href="{PHP|cot_url('forums','c=fold#top')}" rel="nofollow">{PHP.L.forums_foldall}</a>/
+              <a href="{PHP|cot_url('forums','c=fold#top')}" rel="nofollow">{PHP.L.forums_foldall}</a> /
               <a href="{PHP|cot_url('forums','c=unfold#top')}" rel="nofollow">{PHP.L.forums_unfoldall}</a>
-            </td>
-            <th>{PHP.L.Lastpost}</td>
-            <th>{PHP.L.forums_topics}</td>
-            <th>{PHP.L.forums_posts}</td>
-            <th class="center">{PHP.L.Activity}</td>
+            </th>
+            <th>{PHP.L.Lastpost}</th>
+            <th>{PHP.L.forums_topics}</th>
+            <th>{PHP.L.forums_posts}</th>
+            <th class="center">{PHP.L.Activity}</th>
           </thead>
           <!-- BEGIN: CAT -->
           <thead id="{FORUMS_SECTIONS_ROW_CAT}">
@@ -57,7 +57,7 @@
         </table>
       </div>
       <!-- END: FORUMS_SECTIONS -->
-      <hr />
+      <hr>
       <ul class="list-inline center">
         <li>
           <a href="{PHP|cot_url('plug','e=search&amp;tab=frm')}" class="btn btn-default">{PHP.L.forums_searchinforums}</a>

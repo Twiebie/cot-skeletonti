@@ -24,7 +24,7 @@
               {FORUMS_SECTIONS_ROW_LASTPOST}<br>
               {FORUMS_SECTIONS_ROW_LASTPOSTER} {FORUMS_SECTIONS_ROW_TIMEAGO}
               <!-- ELSE -->
-              <span class="text-muted">{PHP.L.blogster_noposts}</span>
+              <span class="text-muted">{PHP.L.None}</span>
               <!-- ENDIF -->
             </td>
             <td>
@@ -62,10 +62,10 @@
             <td>
               <h4><a href="{FORUMS_TOPICS_ROW_URL}" title="{FORUMS_TOPICS_ROW_PREVIEW}">{FORUMS_TOPICS_ROW_TITLE}</a></h4>
               <!-- IF {FORUMS_TOPICS_ROW_DESC} --><small>{FORUMS_TOPICS_ROW_DESC}</small><!-- ENDIF -->
-              <small>{PHP.L.blogster_postedon} {FORUMS_TOPICS_ROW_CREATIONDATE} {PHP.L.blogster_by} {FORUMS_TOPICS_ROW_FIRSTPOSTER} <br> {FORUMS_TOPICS_ROW_PAGES}</small>
+              <small>{FORUMS_TOPICS_ROW_CREATIONDATE} {FORUMS_TOPICS_ROW_FIRSTPOSTER} <br> {FORUMS_TOPICS_ROW_PAGES}</small>
             </td>
             <td>
-              {FORUMS_TOPICS_ROW_UPDATED} {FORUMS_TOPICS_ROW_LASTPOSTER}<br>{FORUMS_TOPICS_ROW_TIMEAGO} {PHP.L.blogster_ago}
+              {FORUMS_TOPICS_ROW_UPDATED} {FORUMS_TOPICS_ROW_LASTPOSTER}<br>{FORUMS_TOPICS_ROW_TIMEAGO}
             </td>
             <td>
               {FORUMS_TOPICS_ROW_POSTCOUNT}

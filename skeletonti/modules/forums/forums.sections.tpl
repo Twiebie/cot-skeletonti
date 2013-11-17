@@ -44,7 +44,7 @@
                 {FORUMS_SECTIONS_ROW_LASTPOST}<br>
                 {FORUMS_SECTIONS_ROW_LASTPOSTDATE} {FORUMS_SECTIONS_ROW_LASTPOSTER}
                 <!-- ELSE -->
-                <span class="text-muted">{PHP.L.blogster_noposts}</span>
+                <span class="text-muted">{PHP.L.None}</span>
                 <!-- ENDIF -->
               </td>
               <td>{FORUMS_SECTIONS_ROW_TOPICCOUNT}</td>

@@ -62,7 +62,6 @@
       </script>
       <p class="center well">
         {POLL_VOTERS}
-        {PHP.L.blogster_voters}
         {POLL_SINCE}
       </p>
       <!-- END: POLL_VIEW_VOTED -->

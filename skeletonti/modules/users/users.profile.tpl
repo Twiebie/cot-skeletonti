@@ -2,7 +2,7 @@
       <h2>{USERS_PROFILE_TITLE}</h2>
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
       <form action="{USERS_PROFILE_FORM_SEND}" method="post" enctype="multipart/form-data" name="profile" role="form">
-        <input type="hidden" name="userid" value="{USERS_PROFILE_ID}" />
+        <input type="hidden" name="userid" value="{USERS_PROFILE_ID}">
         <div class="table-responsive">
           <table class="table table-striped">
             <tbody>
@@ -116,7 +116,7 @@
               <tr>
                 <td></td>
                 <td>
-                  <input type="submit" class="btn btn-primary" value="{PHP.L.Update}" />
+                  <input type="submit" class="btn btn-primary" value="{PHP.L.Update}">
                 </td>
               </tr>
             </tbody>

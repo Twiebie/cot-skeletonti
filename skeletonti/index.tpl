@@ -7,17 +7,17 @@
 
       <div class="row">
         <!-- IF {INDEX_NEWS} -->
-        <div class="col-lg-8">
+        <div class="col-md-8">
           {INDEX_NEWS}
         </div>
         <!-- ENDIF -->
         <!-- IF {RECENT_PAGES} -->
-        <div class="col-lg-4">
+        <div class="col-sm-6 col-md-4">
           {RECENT_PAGES}
         </div>
         <!-- ENDIF -->
         <!-- IF {RECENT_FORUMS} -->
-        <div class="col-lg-4">
+        <div class="col-sm-6 col-md-4">
           {RECENT_FORUMS}
         </div>
         <!-- ENDIF -->

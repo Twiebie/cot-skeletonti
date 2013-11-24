@@ -4,7 +4,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <!-- IF {PHP.usr.maingrp} > 0 --><th>{USERS_TOP_PM}</td><!-- ENDIF -->
+              <!-- IF {PHP.usr.maingrp} > 0 --><th>{USERS_TOP_PM}</th><!-- ENDIF -->
               <th>{USERS_TOP_NAME}</th>
               <th>{USERS_TOP_GRPTITLE}</th>
               <th>{USERS_TOP_GRPLEVEL}</th>

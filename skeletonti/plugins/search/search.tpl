@@ -1,12 +1,12 @@
 <!-- BEGIN: MAIN -->
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h2>{PLUGIN_TITLE}</h2>
 
           <form id="search" name="search" action="{PLUGIN_SEARCH_ACTION}" method="get" role="form">
-            <input type="hidden" name="e" value="search" />
+            <input type="hidden" name="e" value="search">
             <p>{PLUGIN_SEARCH_TEXT}</p>
-            <p><input type="submit" class="btn btn-primary" value="{PHP.L.plu_search_key}" /></p>
+            <p><input type="submit" class="btn btn-primary" value="{PHP.L.plu_search_key}"></p>
             <a href="{PHP|cot_url('plug','e=search')}" class="btn btn-default <!-- IF !{PHP.tab} --> active<!-- ENDIF -->">{PHP.L.plu_tabs_all}</a>
             <!-- IF {PHP.cot_plugins_active.forum} --><a href="{PHP|cot_url('plug','e=search&amp;tab=frm')}" class="btn btn-default <!-- IF {PHP.tab} == 'frm' --> active<!-- ENDIF -->">{PHP.L.Forums}</a><!-- ENDIF -->
             <!-- IF {PHP.cot_plugins_active.page} --><a href="{PHP|cot_url('plug','e=search&amp;tab=pag')}" class="btn btn-default <!-- IF {PHP.tab} == 'pag' --> active<!-- ENDIF -->">{PHP.L.Pages}</a><!-- ENDIF -->
@@ -65,19 +65,19 @@
             <ul class="pagination">{PLUGIN_PAGEPREV}{PLUGIN_PAGENAV}{PLUGIN_PAGENEXT}</ul>
         </div>
 <!-- IF {PHP.cfg.plugin.search.extrafilters} -->
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.Filter}</h3>
           <!-- BEGIN: PAGES_OPTIONS -->
           <div class="panel panel-default">
             <div class="panel-heading">{PHP.L.Pages}</div>
             <div class="panel-body">
-              <div class="col-lg-6">
+              <div class="col-md-6">
                 <strong>{PHP.L.plu_pag_set_sec}:</strong>
                 <p>{PLUGIN_PAGE_SEC_LIST}</p>
                 <p>{PLUGIN_PAGE_SEARCH_SUBCAT}</p>
                 <small>{PHP.L.plu_ctrl_list}</small>
               </div>
-              <div class="col-lg-6">
+              <div class="col-md-6">
                 <strong>{PHP.L.plu_other_opt}:</strong>
                 <p><label>{PLUGIN_PAGE_SEARCH_NAMES} {PHP.L.plu_pag_search_names}</label></p>
                 <p>{PLUGIN_PAGE_SEARCH_DESC}</p>
@@ -95,13 +95,13 @@
           <div class="panel panel-default">
             <div class="panel-heading">{PHP.L.Forums}</div>
             <div class="panel-body">
-              <div class="col-lg-6">
+              <div class="col-md-6">
                 <strong>{PHP.L.plu_frm_set_sec}:</strong>
                 <p>{PLUGIN_FORUM_SEC_LIST}</p>
                 <p>{PLUGIN_FORUM_SEARCH_SUBCAT}</p>
                 <small>{PHP.L.plu_ctrl_list}</small>
               </div>
-              <div class="col-lg-6">
+              <div class="col-md-6">
                 <strong>{PHP.L.plu_other_opt}:</strong>
                 <p>{PLUGIN_FORUM_SEARCH_NAMES}</p>
                 <p>{PLUGIN_FORUM_SEARCH_POST}</p>
@@ -113,7 +113,7 @@
             </div>
           </div>
           <!-- END: FORUMS_OPTIONS -->
-       </div> <!-- ./col-lg-6 filters -->
+       </div> <!-- ./col-md-6 filters -->
 <!-- ENDIF -->
           </form>
         </div>

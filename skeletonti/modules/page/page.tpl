@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-md-8">
           {PAGE_TITLE}
           <h3>{PAGE_SHORTTITLE}</h3>
           <!-- IF {PAGE_DESC} -->
@@ -21,7 +21,7 @@
           <!-- ENDIF -->
           {PAGE_COMMENTS_DISPLAY}
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">{PHP.L.Information}</div>
             <div class="panel-body">

@@ -14,17 +14,17 @@
                 <td>
                   <h4>{I18N_CATEGORY_ROW_TITLE}</h4>
                   <em>{I18N_CATEGORY_ROW_DESC}</em>
-                  <input type="hidden" name="{I18N_CATEGORY_ROW_CODE_NAME}" value="{I18N_CATEGORY_ROW_CODE_VALUE}" />
+                  <input type="hidden" name="{I18N_CATEGORY_ROW_CODE_NAME}" value="{I18N_CATEGORY_ROW_CODE_VALUE}">
                 </td>
                 <td>
-                  <div><input type="text" name="{I18N_CATEGORY_ROW_ITITLE_NAME}" value="{I18N_CATEGORY_ROW_ITITLE_VALUE}" maxlength="128" size="64" /></div>
+                  <div><input type="text" name="{I18N_CATEGORY_ROW_ITITLE_NAME}" value="{I18N_CATEGORY_ROW_ITITLE_VALUE}" maxlength="128" size="64"></div>
                   <div><textarea name="{I18N_CATEGORY_ROW_IDESC_NAME}" rows="4" cols="64">{I18N_CATEGORY_ROW_IDESC_VALUE}</textarea></div>
                 </td>
               </tr>
               <!-- END: I18N_CATEGORY_ROW -->
               <tr>
                 <td></td>
-                <td><input type="submit" value="{PHP.L.Update}" class="btn btn-primary" /></td>
+                <td><input type="submit" value="{PHP.L.Update}" class="btn btn-primary"></td>
               </tr>
             </tbody>
           </table>

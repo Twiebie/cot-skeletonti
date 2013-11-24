@@ -11,14 +11,14 @@
 
       <form name="reqauth" action="{PASSRECOVER_URL_FORM}" method="post" class="form-horizontal" role="form">
         <div class="form-group">
-          <label class="col-lg-2 control-label">{PHP.L.pasrec_youremail}</label>
-          <div class="col-lg-4">
-            <input type="email" name="email" class="form-control" value="" size="20" maxlength="64" />
+          <label class="col-md-2 control-label">{PHP.L.pasrec_youremail}</label>
+          <div class="col-md-4">
+            <input type="email" name="email" class="form-control" value="" size="20" maxlength="64">
           </div>
         </div>
         <div class="form-group">
-          <div class="col-lg-offset-2 col-lg-10">
-            <input type="submit" class="btn btn-primary" value="{PHP.L.pasrec_request}" />
+          <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-primary" value="{PHP.L.pasrec_request}">
           </div>
         </div>
       </form>

@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
           <h2>
             {USERS_DETAILS_NAME}
             <!-- BEGIN: USERS_DETAILS_ADMIN --> &nbsp; [ {USERS_DETAILS_ADMIN_EDIT} ]<!-- END: USERS_DETAILS_ADMIN -->
@@ -13,10 +13,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-2">
+        <div class="col-md-2">
           {USERS_DETAILS_AVATAR}
         </div>
-        <div class="col-lg-10">
+        <div class="col-md-10">
           <table class="table table-striped">
           <!-- IF {PHP.cot_modules.pm} -->
             <!-- IF {PHP.usr.maingrp} > 0 -->

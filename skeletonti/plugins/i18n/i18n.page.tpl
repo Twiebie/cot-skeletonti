@@ -4,8 +4,8 @@
       <form action="{I18N_ACTION}" method="post" role="form">
         <table class="table table-striped">
           <thead>
-            <th class="col-lg-6">{PHP.L.i18n_original} ({I18N_ORIGINAL_LANG})</th>
-            <th class="col-lg-6">{I18N_LOCALIZED_LANG}</th>
+            <th class="col-md-6">{PHP.L.i18n_original} ({I18N_ORIGINAL_LANG})</th>
+            <th class="col-md-6">{I18N_LOCALIZED_LANG}</th>
           </thead>
           <tbody>
             <tr>
@@ -13,7 +13,7 @@
             </tr>
             <tr>
               <td><h3>{I18N_PAGE_TITLE}</h3></td>
-              <td><input type="text" class="form-control" name="title" value="{I18N_IPAGE_TITLE}" maxlength="128" size="64" /></td>
+              <td><input type="text" class="form-control" name="title" value="{I18N_IPAGE_TITLE}" maxlength="128" size="64"></td>
             </tr>
             <tr>
               <th colspan="2"><big>{PHP.L.Description}</big></th>
@@ -40,7 +40,7 @@
             <!-- END: TAGS -->
             <tr>
               <td></td>
-              <td><input type="submit" value="{PHP.L.Submit}" class="btn btn-primary" /></td>
+              <td><input type="submit" value="{PHP.L.Submit}" class="btn btn-primary"></td>
             </tr>
           </tbody>
         </table>

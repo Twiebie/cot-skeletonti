@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
       <div class="row">
-        <div class="col-lg-8">
+        <div class="col-md-8">
           <h2>{LIST_CATTITLE}</h2>
           <!-- BEGIN: LIST_ROW -->
           <h3><a href="{LIST_ROW_URL}">{LIST_ROW_SHORTTITLE}</a></h3>
@@ -19,7 +19,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4">
+        <div class="col-md-4">
           <!-- BEGIN: LIST_ROWCAT -->
           <h3><a href="{LIST_ROWCAT_URL}" title="{LIST_ROWCAT_TITLE}">{LIST_ROWCAT_TITLE}</a> ({LIST_ROWCAT_COUNT})</h3>
           <!-- IF {LIST_ROWCAT_DESC} -->

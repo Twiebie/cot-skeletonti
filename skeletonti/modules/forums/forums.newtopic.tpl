@@ -41,15 +41,15 @@
               <td>
                 <!-- BEGIN: OPTIONS -->
                 <div class="form-group">
-                  <div class="col-lg-10">
+                  <div class="col-md-10">
                     {EDIT_POLL_OPTION_TEXT}
                   </div>
-                  <div class="col-lg-2">
-                    <input name="deloption" value="x" type="button" class="deloption btn btn-danger btn-xs" style="display: none;" />
+                  <div class="col-md-2">
+                    <input name="deloption" value="x" type="button" class="deloption btn btn-danger btn-xs" style="display: none;">
                   </div>
                 </div>
                 <!-- END: OPTIONS -->
-                <input id="addoption" name="addoption" value="{PHP.L.Add}" type="button" class="btn btn-default" style="display: none;" />
+                <input id="addoption" name="addoption" value="{PHP.L.Add}" type="button" class="btn btn-default" style="display: none;">
               </td>
             </tr>
             <tr>

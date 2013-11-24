@@ -82,35 +82,46 @@
         {FORUMS_TOPICS_PAGEPREV}{FORUMS_TOPICS_PAGES}{FORUMS_TOPICS_PAGENEXT}
       </ul>
 
-      <ul class="nav nav-tabs" id="forumTab">
-        <li class="active"><a href="#forums-help" data-toggle="tab">{PHP.L.Help}</a></li>
-        <li><a href="#forums-online" data-toggle="tab">{PHP.L.Viewers}</a></li>
-      </ul>
+      <div class="row">
+        <ul class="nav nav-tabs" id="forumTab">
+          <li class="active"><a href="#forums-help" data-toggle="tab">{PHP.L.Help}</a></li>
+          <li><a href="#forums-online" data-toggle="tab">{PHP.L.Viewers}</a></li>
+        </ul>
 
-      <div class="tab-content">
-        <div class="tab-pane active" id="forums-help">
-          <h5>{PHP.L.Help}</h5>
-            <div class="row">
-              <div class="col-lg-3">{PHP.R.forums_icon_posts}{PHP.L.forums_nonewposts}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_new}{PHP.L.forums_newposts}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_hot}{PHP.L.forums_nonewpostspopular}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_new_hot}{PHP.L.forums_newpostspopular}</div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_sticky}{PHP.L.forums_sticky}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_new_sticky}{PHP.L.forums_newpostssticky}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_locked}{PHP.L.forums_locked}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_new_locked}{PHP.L.forums_newpostslocked}</div>
-            </div>
-            <div class="row">
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_sticky_locked}{PHP.L.forums_announcment}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_new_sticky_locked}{PHP.L.forums_newannouncment}</div>
-              <div class="col-lg-3">{PHP.R.forums_icon_posts_moved}{PHP.L.forums_movedoutofthissection}</div>
-            </div>
-        </div>
-        <div class="tab-pane" id="forums-online">
-          <strong>{PHP.L.forums_viewers}:</strong> {FORUMS_TOPICS_VIEWERS}<br>
-          {FORUMS_TOPICS_VIEWER_NAMES}
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="forums-help">
+            <p>
+              <div class="col-md-4">
+                <ul class="list-unstyled">
+                  <li>{PHP.R.forums_icon_posts}{PHP.L.forums_nonewposts}</li>
+                  <li>{PHP.R.forums_icon_posts_new}{PHP.L.forums_newposts}</li>
+                  <li>{PHP.R.forums_icon_posts_hot}{PHP.L.forums_nonewpostspopular}</li>
+                  <li>{PHP.R.forums_icon_posts_new_hot}{PHP.L.forums_newpostspopular}</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="list-unstyled">
+                  <li>{PHP.R.forums_icon_posts_sticky}{PHP.L.forums_sticky}</li>
+                  <li>{PHP.R.forums_icon_posts_new_sticky}{PHP.L.forums_newpostssticky}</li>
+                  <li>{PHP.R.forums_icon_posts_locked}{PHP.L.forums_locked}</li>
+                  <li>{PHP.R.forums_icon_posts_new_locked}{PHP.L.forums_newpostslocked}</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <ul class="list-unstyled">
+                  <li>{PHP.R.forums_icon_posts_sticky_locked}{PHP.L.forums_announcment}</li>
+                  <li>{PHP.R.forums_icon_posts_new_sticky_locked}{PHP.L.forums_newannouncment}</li>
+                  <li>{PHP.R.forums_icon_posts_moved}{PHP.L.forums_movedoutofthissection}</li>
+                </ul>
+              </div>
+            </p>
+          </div>
+          <div class="tab-pane fade" id="forums-online">
+            <p>
+              <strong>{PHP.L.forums_viewers}:</strong> {FORUMS_TOPICS_VIEWERS}<br>
+              {FORUMS_TOPICS_VIEWER_NAMES}
+            </p>
+          </div>
         </div>
       </div>
 <!-- END: MAIN -->

@@ -37,10 +37,10 @@
       <div style="display: {COMMENTS_DISPLAY}">
         <!-- BEGIN: COMMENTS_ROW -->
         <div class="row">
-          <div class="col-lg-2">
+          <div class="col-md-2">
             <a href="{COMMENTS_ROW_AUTHOR_DETAILSLINK}">{COMMENTS_ROW_AUTHOR_AVATAR}</a>
           </div>
-          <div class="col-lg-10">
+          <div class="col-md-10">
             <h4>
               <a href="{COMMENTS_ROW_URL}" id="c{COMMENTS_ROW_ID}">{COMMENTS_ROW_ORDER}.</a> {COMMENTS_ROW_AUTHOR}
               <span class="pull-right"><small>{COMMENTS_ROW_DATE}</small></span>

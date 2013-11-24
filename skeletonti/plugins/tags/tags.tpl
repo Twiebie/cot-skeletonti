@@ -2,7 +2,7 @@
       <h2>{PHP.L.tags_Search_tags}</h2>
       <form action="{TAGS_ACTION}" method="post" class="form-inline" role="form">
         <div class="form-group">
-          <input type="text" name="t" value="{TAGS_QUERY}" class="form-control" />
+          <input type="text" name="t" value="{TAGS_QUERY}" class="form-control">
         </div>
         <div class="form-group">
           <select name="order" class="form-control">
@@ -11,7 +11,7 @@
             {TAGS_ORDER}
           </select>
         </div>
-        <input type="submit" class="btn btn-primary" value="&raquo;" />
+        <input type="submit" class="btn btn-primary" value="&raquo;">
       </form>
 
       <!-- BEGIN: TAGS_CLOUD -->

@@ -1,7 +1,7 @@
 <!-- BEGIN: MAIN -->
       <div class="row">
-        <div class="col-lg-12">
-          <h2>{PHP.L.plu_title}</h2>
+        <div class="col-md-12">
+          <h2>{PHP.L.Statistics}</h2>
           <h3>{PHP.L.Main}:</h3>
           <div class="alert alert-info">{PHP.L.plu_maxwasreached} <strong>{STATISTICS_MAX_DATE}</strong>, <strong>{STATISTICS_MAX_HITS}</strong> {PHP.L.plu_pagesdisplayedthisday}</div>
           <table class="table table-striped">
@@ -29,11 +29,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.Private_Messages}:</h3>
           <table class="table table-striped">
             <tr>
-              <td class="width80">{PHP.L.plu_totalpms}</td>
+              <td>{PHP.L.plu_totalpms}</td>
               <td class="right">{STATISTICS_TOTALPMSENT}</td>
             </tr>
             <tr>
@@ -46,7 +46,7 @@
             </tr>
           </table>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.Forums}:</h3>
           <table class="table table-striped">
             <tr>
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.plu_pollsratings}:</h3>
           <table class="table table-striped">
             <tr>
@@ -86,7 +86,7 @@
             </tr>
           </table>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.PFS}:</h3>
           <table class="table table-striped">
             <tr>
@@ -101,7 +101,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.plu_contributions}:</h3>
           <table class="table table-striped">
             <!-- BEGIN: IS_USER -->
@@ -125,7 +125,7 @@
             <!-- END: IS_NOT_USER -->
           </table>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
           <h3>{PHP.L.plu_membersbycountry}:</h3>
           <table class="table table-striped">
             <tr>

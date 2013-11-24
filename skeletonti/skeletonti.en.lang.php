@@ -20,3 +20,4 @@ $L['MembersOnly']  = 'Members only';
 $L['RecentPages']  = 'Recent Pages';
 $L['RecentTopics'] = 'Recent Topics';
 $L['Viewers']      = 'Viewers';
+$L['Contact']      = 'Contact';

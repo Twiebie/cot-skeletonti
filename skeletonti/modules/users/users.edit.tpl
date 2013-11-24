@@ -2,7 +2,7 @@
       <h2>{USERS_EDIT_TITLE}</h2>
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
       <form action="{USERS_EDIT_SEND}" method="post" name="useredit" enctype="multipart/form-data" role="form">
-        <input type="hidden" name="id" value="{USERS_EDIT_ID}" />
+        <input type="hidden" name="id" value="{USERS_EDIT_ID}">
         <div class="table-responsive">
           <table class="table table-striped">
             <tr>
@@ -106,7 +106,7 @@
             </tr>
             <tr>
               <td></td>
-              <td><input type="submit" class="btn btn-primary" value="{PHP.L.Update}" /></td>
+              <td><input type="submit" class="btn btn-primary" value="{PHP.L.Update}"></td>
             </tr>
           </table>
         </div>

@@ -3,7 +3,7 @@
 <html>
   <head>
     {POPUP_METAS}
-    <base href="{PHP.cfg.mainurl}/" />
+    <base href="{PHP.cfg.mainurl}/">
     {POPUP_JAVASCRIPT}
     <script>
     //<![CDATA[
@@ -12,7 +12,7 @@
     }
     //]]>
     </script>
-    <link href="{PHP.themes_dir}/{PHP.theme}/css/{PHP.scheme}.css" type="text/css" rel="stylesheet" />
+    <link href="{PHP.themes_dir}/{PHP.theme}/css/{PHP.scheme}.css" type="text/css" rel="stylesheet">
   </head>
   <body>
     {POPUP_BODY}

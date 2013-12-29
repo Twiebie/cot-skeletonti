@@ -7,3 +7,9 @@
 .right { text-align: right; }
 
 .middle { vertical-align: middle!important; }
+
+li.list-group-item.active, li.list-group-item.active a {
+  color: #ffffff;
+  background-color: #428bca;
+  border-color: #428bca;
+}

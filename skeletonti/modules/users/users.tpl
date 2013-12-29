@@ -4,7 +4,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <!-- IF {PHP.usr.maingrp} > 0 --><th>{USERS_TOP_PM}</th><!-- ENDIF -->
+              <!-- IF {PHP.usr.maingrp} > 0 AND {PHP.cot_modules.pm} --><th>{USERS_TOP_PM}</th><!-- ENDIF -->
               <th>{USERS_TOP_NAME}</th>
               <th>{USERS_TOP_GRPTITLE}</th>
               <th>{USERS_TOP_GRPLEVEL}</th>
@@ -15,7 +15,7 @@
           <tbody>
           <!-- BEGIN: USERS_ROW -->
             <tr>
-              <!-- IF {PHP.usr.maingrp} > 0 --><td>{USERS_ROW_PM}</td><!-- ENDIF -->
+              <!-- IF {PHP.usr.maingrp} > 0 AND {PHP.cot_modules.pm} --><td>{USERS_ROW_PM}</td><!-- ENDIF -->
               <td>{USERS_ROW_NAME}&nbsp;{USERS_ROW_TAG}</td>
               <td>{USERS_ROW_MAINGRP}</td>
               <td>{USERS_ROW_MAINGRPSTARS}</td>
@@ -42,11 +42,8 @@
         </div>
         <button type="submit" class="btn btn-primary">{PHP.L.Submit}</button>
       </form>
-      <ul class="list-inline">
-        <li>{PHP.L.users_usersperpage}: {USERS_TOP_MAXPERPAGE}</li>
-        <li>{PHP.L.users_usersinthissection}: {USERS_TOP_TOTALUSERS}</li>
-      </ul>
-      <p class="paging">
-        {USERS_TOP_PAGEPREV}{USERS_TOP_PAGNAV}{USERS_TOP_PAGENEXT}
-      </p>
+      <!-- IF {USERS_TOP_TOTALPAGE} > 1 -->
+      <ul class="pagination">{USERS_TOP_PAGEPREV}{USERS_TOP_PAGNAV}{USERS_TOP_PAGENEXT}</ul>
+      <!-- ENDIF -->
+      <p>{PHP.L.users_usersperpage}: {USERS_TOP_MAXPERPAGE}, {PHP.L.users_usersinthissection}: {USERS_TOP_TOTALUSERS}</p>
 <!-- END: MAIN -->

@@ -18,13 +18,11 @@
         </div>
         <div class="col-md-10">
           <table class="table table-striped">
-          <!-- IF {PHP.cot_modules.pm} -->
-            <!-- IF {PHP.usr.maingrp} > 0 -->
-              <tr>
-                <td>{PHP.L.users_sendpm}:</td>
-                <td>{USERS_DETAILS_PM}</td>
-              </tr>
-            <!-- ENDIF -->
+          <!-- IF {PHP.usr.maingrp} > 0 AND {PHP.cot_modules.pm} -->
+          <tr>
+            <td>{PHP.L.users_sendpm}:</td>
+            <td>{USERS_DETAILS_PM}</td>
+          </tr>
           <!-- ENDIF -->
           <tr>
             <td>{PHP.L.Country}:</td>
@@ -36,7 +34,7 @@
           </tr>
           <tr>
             <td>{PHP.L.Groupsmembership}:</td>
-            <td>{PHP.L.Maingroup}:<br>&nbsp;{PHP.out.img_down}<br />{USERS_DETAILS_GROUPS}</td>
+            <td>{USERS_DETAILS_GROUPS}</td>
           </tr>
           <tr>
             <td>{PHP.L.Timezone}:</td>

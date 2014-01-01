@@ -8,14 +8,14 @@
 
 .middle { vertical-align: middle!important; }
 
+.editor, .minieditor, .medieditor { width: 100%; }
+
 /* Fix for main group list item in users profile. */
 li.list-group-item.active, li.list-group-item.active a {
   color: #ffffff;
   background-color: #428bca;
   border-color: #428bca;
 }
-
-.editor, .minieditor { width: 100%; }
 
 /* Forums */
 #forums-help .list-unstyled li { padding: 5px; }

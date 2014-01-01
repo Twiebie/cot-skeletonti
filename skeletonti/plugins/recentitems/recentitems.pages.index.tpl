@@ -13,11 +13,18 @@
             </td>
           </tr>
           <!-- END: PAGE_ROW -->
+          <!-- BEGIN: NO_PAGES_FOUND -->
+          <tr>
+            <td class="center">{PHP.L.recentitems_nonewpages}</td>
+          </tr>
+          <!-- END: NO_PAGES_FOUND -->
         </tbody>
-        <!-- BEGIN: NO_PAGES_FOUND -->
-        <tr>
-          <td class="center">{PHP.L.recentitems_nonewpages}</td>
-        </tr>
-        <!-- END: NO_PAGES_FOUND -->
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <a href="{PHP|cot_url('recentitems', 'mode=pages')}" class="pull-right">{PHP.L.Viewall}</a>
+            </td>
+          </tr>
+        </tfoot>
       </table>
 <!-- END: MAIN -->

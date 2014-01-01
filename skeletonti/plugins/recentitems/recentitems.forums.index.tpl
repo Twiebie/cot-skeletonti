@@ -16,11 +16,18 @@
             </td>
           </tr>
           <!-- END: TOPICS_ROW -->
+          <!-- BEGIN: NO_TOPICS_FOUND -->
+          <tr>
+            <td class="center" colspan="4">{PHP.L.recentitems_nonewposts}</td>
+          </tr>
+          <!-- END: NO_TOPICS_FOUND -->
         </tbody>
-        <!-- BEGIN: NO_TOPICS_FOUND -->
-        <tr>
-          <td class="center" colspan="4">{PHP.L.recentitems_nonewposts}</td>
-        </tr>
-        <!-- END: NO_TOPICS_FOUND -->
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <a href="{PHP|cot_url('recentitems', 'mode=forums')}" class="pull-right">{PHP.L.Viewall}</a>
+            </td>
+          </tr>
+        </tfoot>
       </table>
 <!-- END: MAIN -->

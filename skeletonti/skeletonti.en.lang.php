@@ -26,3 +26,4 @@ $L['Viewers']      = 'Viewers';
 $L['Contact']      = 'Contact';
 $L['ID']           = 'ID';
 $L['Notopics']     = 'There are no topics to show.';
+$L['Viewall']      = 'View all';

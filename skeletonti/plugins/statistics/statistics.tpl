@@ -128,27 +128,29 @@
         <div class="col-md-6">
           <h3>{PHP.L.plu_membersbycountry}:</h3>
           <table class="table table-striped">
-            <tr>
-              <td>{PHP.L.plu_flag}</td>
-              <td><a href="{STATISTICS_PLU_URL}">{PHP.cot_img_down}</a> {PHP.L.Country}</td>
-              <td class="right"><a href="{STATISTICS_SORT_BY_USERCOUNT}" rel="nofollow">{PHP.cot_img_down}</a> {PHP.L.Users}</td>
-            </tr>
-            <!-- BEGIN: ROW_COUNTRY -->
-            <tr>
-              <td>{STATISTICS_COUNTRY_FLAG}</td>
-              <td>{STATISTICS_COUNTRY_NAME}</td>
-              <td class="right">{STATISTICS_COUNTRY_COUNT}</td>
-            </tr>
-            <!-- END: ROW_COUNTRY -->
-            <tr>
-              <td class="left"><span class="glyphicon glyphicon-question-sign"></span></td>
-              <td>{PHP.L.plu_unknown}</td>
-              <td class="right">{STATISTICS_UNKNOWN_COUNT}</td>
-            </tr>
-            <tr>
-              <td colspan="2" class="left">{PHP.L.Total}:</td>
-              <td class="right">{STATISTICS_TOTALUSERS}</td>
-            </tr>
+            <thead>
+              <th>{PHP.L.plu_flag}</th>
+              <th><a href="{STATISTICS_PLU_URL}">{PHP.cot_img_down}</a> {PHP.L.Country}</th>
+              <th class="right"><a href="{STATISTICS_SORT_BY_USERCOUNT}" rel="nofollow">{PHP.cot_img_down}</a> {PHP.L.Users}</th>
+            </thead>
+            <tbody>
+              <!-- BEGIN: ROW_COUNTRY -->
+              <tr>
+                <td>{STATISTICS_COUNTRY_FLAG}</td>
+                <td>{STATISTICS_COUNTRY_NAME}</td>
+                <td class="right">{STATISTICS_COUNTRY_COUNT}</td>
+              </tr>
+              <!-- END: ROW_COUNTRY -->
+              <tr>
+                <td class="left"><span class="glyphicon glyphicon-question-sign"></span></td>
+                <td>{PHP.L.plu_unknown}</td>
+                <td class="right">{STATISTICS_UNKNOWN_COUNT}</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="left">{PHP.L.Total}:</td>
+                <td class="right">{STATISTICS_TOTALUSERS}</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </div>

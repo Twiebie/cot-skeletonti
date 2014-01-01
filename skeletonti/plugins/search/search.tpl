@@ -5,14 +5,23 @@
 
           <form id="search" name="search" action="{PLUGIN_SEARCH_ACTION}" method="get" role="form">
             <input type="hidden" name="e" value="search">
-            <p>{PLUGIN_SEARCH_TEXT}</p>
-            <p><input type="submit" class="btn btn-primary" value="{PHP.L.plu_search_key}"></p>
-            <a href="{PHP|cot_url('plug','e=search')}" class="btn btn-default <!-- IF !{PHP.tab} --> active<!-- ENDIF -->">{PHP.L.plu_tabs_all}</a>
-            <!-- IF {PHP.cot_plugins_active.forum} --><a href="{PHP|cot_url('plug','e=search&amp;tab=frm')}" class="btn btn-default <!-- IF {PHP.tab} == 'frm' --> active<!-- ENDIF -->">{PHP.L.Forums}</a><!-- ENDIF -->
-            <!-- IF {PHP.cot_plugins_active.page} --><a href="{PHP|cot_url('plug','e=search&amp;tab=pag')}" class="btn btn-default <!-- IF {PHP.tab} == 'pag' --> active<!-- ENDIF -->">{PHP.L.Pages}</a><!-- ENDIF -->
-            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#search-filters">
-              {PHP.L.Filter} <b class="caret"></b></i>
-            </button>
+            <div class="form-group">
+              <div class="input-group">
+                {PLUGIN_SEARCH_TEXT}
+                <span class="input-group-btn">
+                  <input type="submit" class="btn btn-primary" value="{PHP.L.plu_search_key}">
+                </span>
+              </div>
+            </div>
+
+            <div class="form-group btn-group">
+              <a href="{PHP|cot_url('plug','e=search')}" class="btn btn-default<!-- IF !{PHP.tab} --> active<!-- ENDIF -->">{PHP.L.plu_tabs_all}</a>
+              <!-- IF {PHP.cot_plugins_active.page} --><a href="{PHP|cot_url('plug','e=search&amp;tab=pag')}" class="btn btn-default<!-- IF {PHP.tab} == 'pag' --> active<!-- ENDIF -->">{PHP.L.Pages}</a><!-- ENDIF -->
+              <!-- IF {PHP.cot_plugins_active.forums} --><a href="{PHP|cot_url('plug','e=search&amp;tab=frm')}" class="btn btn-default<!-- IF {PHP.tab} == 'frm' --> active<!-- ENDIF -->">{PHP.L.Forums}</a><!-- ENDIF -->
+              <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#search-filters">
+                {PHP.L.Filter} <b class="caret"></b>
+              </button>
+            </div>
 
             <div id="search-filters" class="collapse">
               <div class="panel panel-default">
@@ -24,7 +33,7 @@
               </div>
             </div>
 
-            <p>{FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}</p>
+            {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
 
             <!-- BEGIN: RESULTS -->
             <!-- BEGIN: PAGES -->
@@ -62,9 +71,12 @@
             <!-- END: FORUMS -->
             <!-- END: RESULTS -->
 
+            <!-- IF {PLUGIN_PAGENAV} -->
             <ul class="pagination">{PLUGIN_PAGEPREV}{PLUGIN_PAGENAV}{PLUGIN_PAGENEXT}</ul>
+            <!-- ENDIF -->
         </div>
-<!-- IF {PHP.cfg.plugin.search.extrafilters} -->
+
+        <!-- IF {PHP.cfg.plugin.search.extrafilters} -->
         <div class="col-md-6">
           <h3>{PHP.L.Filter}</h3>
           <!-- BEGIN: PAGES_OPTIONS -->
@@ -113,9 +125,9 @@
             </div>
           </div>
           <!-- END: FORUMS_OPTIONS -->
-       </div> <!-- ./col-md-6 filters -->
-<!-- ENDIF -->
-          </form>
         </div>
-      </div>
+        <!-- ENDIF -->
+
+          </form>
+      </div><!-- /.row -->
 <!-- END: MAIN -->

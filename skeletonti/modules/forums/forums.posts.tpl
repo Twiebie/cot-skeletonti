@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
       <!-- BEGIN: FORUMS_POSTS_TOPICPRIVATE -->
-      <div class="alert alert-danger">{PHP.L.forums_privatetopic}</div>
+      <div class="alert alert-warning">{PHP.L.forums_privatetopic}</div>
       <!-- END: FORUMS_POSTS_TOPICPRIVATE -->
 
       <!-- BEGIN: POLLS_VIEW -->
@@ -57,21 +57,28 @@
         </thead>
         <!-- BEGIN: FORUMS_POSTS_ROW -->
         <tr>
-          <td class="center">
+          <td class="forum-poster center">
             {FORUMS_POSTS_ROW_ANCHORLINK}
-            <h4 class="center">{FORUMS_POSTS_ROW_USERNAME}</h4>
-            <p class="center">
+            <h4>{FORUMS_POSTS_ROW_USERNAME}</h4>
+            <p>
             <!-- IF {FORUMS_POSTS_ROW_USERAVATAR} -->
-            <a href="{FORUMS_POSTS_ROW_USERDETAILSLINK}">{FORUMS_POSTS_ROW_USERAVATAR}<!-- ELSE -->{PHP.R.forums_noavatar}</a><!-- ENDIF --><br>
-            {FORUMS_POSTS_ROW_USERMAINGRPTITLE}
+            <a href="{FORUMS_POSTS_ROW_USERDETAILSLINK}">
+              {FORUMS_POSTS_ROW_USERAVATAR}
+            </a>
+            <!-- ELSE -->
+            {PHP.R.forums_noavatar}
+            <!-- ENDIF -->
+            <p>{FORUMS_POSTS_ROW_USERMAINGRPTITLE}</p>
             <!-- IF {FORUMS_POSTS_ROW_USERONLINE} == 1 -->
-            <br><span class="label label-success">{FORUMS_POSTS_ROW_USERONLINETITLE}</span>
+            <p class="label label-success">{FORUMS_POSTS_ROW_USERONLINETITLE}</p>
             <!-- ENDIF -->
             </p>
           </td>
-          <td>
+          <td class="forum-post">
             <ul class="list-inline">
-              <li><a name="{FORUMS_POSTS_ROW_ID}" id="{FORUMS_POSTS_ROW_POSTID}" href="{FORUMS_POSTS_ROW_IDURL}" rel="nofollow">#{FORUMS_POSTS_ROW_ORDER}</a></li>
+              <li>
+                <a name="{FORUMS_POSTS_ROW_ID}" id="{FORUMS_POSTS_ROW_POSTID}" href="{FORUMS_POSTS_ROW_IDURL}" rel="nofollow">#{FORUMS_POSTS_ROW_ORDER}</a>
+              </li>
               <li>{FORUMS_POSTS_ROW_CREATION}</li>
               <!-- IF {FORUMS_POSTS_ROW_POSTERIP} -->
               <li>{FORUMS_POSTS_ROW_POSTERIP}</li>
@@ -87,13 +94,15 @@
               <!-- ENDIF -->
             </ul>
 
-            <p>{FORUMS_POSTS_ROW_TEXT}</p>
+            {FORUMS_POSTS_ROW_TEXT}
 
-            <span class="text-muted">{FORUMS_POSTS_ROW_UPDATEDBY}</span>
+            <!-- IF {FORUMS_POSTS_ROW_UPDATEDBY} -->
+            <p class="text-muted">{FORUMS_POSTS_ROW_UPDATEDBY}</p>
+            <!-- ENDIF -->
             <!-- IF {FORUMS_POSTS_ROW_USERTEXT} -->
-            <div>
+            <p class="forum-signature">
               {FORUMS_POSTS_ROW_USERTEXT}
-            </div>
+            </p>
             <!-- ENDIF -->
           </td>
         </tr>
@@ -105,20 +114,22 @@
       <!-- ENDIF -->
 
       <!-- BEGIN: FORUMS_POSTS_TOPICLOCKED -->
-      <div class="alert alert-danger">{FORUMS_POSTS_TOPICLOCKED_BODY}</div>
+      <div class="alert alert-info">{FORUMS_POSTS_TOPICLOCKED_BODY}</div>
       <!-- END: FORUMS_POSTS_TOPICLOCKED -->
 
       <!-- BEGIN: FORUMS_POSTS_ANTIBUMP -->
-      <div>{FORUMS_POSTS_ANTIBUMP_BODY}</div>
+      <p>{FORUMS_POSTS_ANTIBUMP_BODY}</p>
       <!-- END: FORUMS_POSTS_ANTIBUMP -->
 
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
 
       <!-- BEGIN: FORUMS_POSTS_NEWPOST -->
-      <hr>
       <form action="{FORUMS_POSTS_NEWPOST_SEND}" method="post" name="newpost" role="form">
-        {FORUMS_POSTS_NEWPOST_TEXT}{FORUMS_POSTS_NEWPOST_MYPFS}
-        <p class="center"><button type="submit" class="btn btn-primary">{PHP.L.Reply}</button></p>
+        {FORUMS_POSTS_NEWPOST_TEXT}
+        {FORUMS_POSTS_NEWPOST_MYPFS}
+        <p class="center">
+          <button type="submit" class="btn btn-primary">{PHP.L.Reply}</button>
+        </p>
       </form>
       <!-- END: FORUMS_POSTS_NEWPOST -->
 <!-- END: MAIN -->

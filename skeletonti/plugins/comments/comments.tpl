@@ -22,7 +22,7 @@
             <td colspan="2">
               {COMMENTS_FORM_TEXT}
               <!-- IF {COMMENTS_FORM_PFS} -->{COMMENTS_FORM_PFS}<!-- ENDIF -->
-              <!-- IF {COMMENTS_FORM_SFS} --><span class="spaced">{PHP.cfg.separator}</span>{COMMENTS_FORM_SFS}<!-- ENDIF -->
+              <!-- IF {COMMENTS_FORM_SFS} -->{COMMENTS_FORM_SFS}<!-- ENDIF -->
             </td>
           </tr>
         </table>
@@ -43,10 +43,10 @@
           <div class="col-md-10">
             <h4>
               <a href="{COMMENTS_ROW_URL}" id="c{COMMENTS_ROW_ID}">{COMMENTS_ROW_ORDER}.</a> {COMMENTS_ROW_AUTHOR}
-              <span class="pull-right"><small>{COMMENTS_ROW_DATE}</small></span>
+              <small class="pull-right">{COMMENTS_ROW_DATE}</small>
             </h4>
             <p>{COMMENTS_ROW_TEXT}</p>
-            <span class="text-muted">{COMMENTS_ROW_ADMIN}{COMMENTS_ROW_EDIT}</span>
+            <small class="text-muted">{COMMENTS_ROW_ADMIN}{COMMENTS_ROW_EDIT}</small>
           </div>
         </div>
         <hr>
@@ -61,29 +61,48 @@
         <h4>{PHP.L.Newcomment}</h4>
         {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
         <form action="{COMMENTS_FORM_SEND}" method="post" name="newcomment" role="form">
-          <!-- BEGIN: GUEST -->
-          <div>{PHP.L.Name}: {COMMENTS_FORM_AUTHOR}</div>
-          <!-- END: GUEST -->
-          <div>
+          <!-- IF {PHP.usr.id} == 0 -->
+          <div class="row">
+          <!-- ENDIF -->
+            <!-- BEGIN: GUEST -->
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label>{PHP.L.Name}:</label>
+                {COMMENTS_FORM_AUTHOR}
+              </div>
+            </div>
+            <!-- END: GUEST -->
+            <!-- IF {PHP.usr.id} == 0 AND {COMMENTS_FORM_VERIFYIMG} -->
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label>{COMMENTS_FORM_VERIFYIMG}</label>
+                {COMMENTS_FORM_VERIFY}
+              </div>
+            </div>
+            <!-- ENDIF -->
+          <!-- IF {PHP.usr.id} == 0 -->
+          </div>
+          <!-- ENDIF -->
+
+          <div class="form-group">
             {COMMENTS_FORM_TEXT}
             <!-- IF {COMMENTS_FORM_PFS} -->{COMMENTS_FORM_PFS}<!-- ENDIF -->
-            <!-- IF {COMMENTS_FORM_SFS} --><span class="spaced">{PHP.cfg.separator}</span>{COMMENTS_FORM_SFS}<!-- ENDIF -->
+            <!-- IF {COMMENTS_FORM_SFS} -->{COMMENTS_FORM_SFS}<!-- ENDIF -->
           </div>
 
-          <!-- IF {PHP.usr.id} == 0 AND {COMMENTS_FORM_VERIFYIMG} -->
-          <div>{COMMENTS_FORM_VERIFYIMG}: {COMMENTS_FORM_VERIFY}</div>
-          <!-- ENDIF -->
-          <div class="center">
+          <p class="center">
             <button type="submit" class="btn btn-primary">{PHP.L.Submit}</button>
-          </div>
+          </p>
         </form>
         <div class="alert alert-info">{COMMENTS_FORM_HINT}</div>
         <!-- END: COMMENTS_NEWCOMMENT -->
+
         <!-- BEGIN: COMMENTS_EMPTY -->
-        <div class="alert alert-warning">{COMMENTS_EMPTYTEXT}</div>
+        <div class="alert alert-info">{COMMENTS_EMPTYTEXT}</div>
         <!-- END: COMMENTS_EMPTY -->
+
         <!-- BEGIN: COMMENTS_CLOSED -->
-        <div class="alert alert-error">{COMMENTS_CLOSED}</div>
+        <div class="alert alert-warning">{COMMENTS_CLOSED}</div>
         <!-- END: COMMENTS_CLOSED -->
       </div>
 <!-- END: COMMENTS -->

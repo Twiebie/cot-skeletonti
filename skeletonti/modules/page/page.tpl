@@ -47,17 +47,18 @@
               <hr>
               <!-- END: PAGE_FILE -->
 
+              <!-- IF {PAGE_I18N_TRANSLATE} -->
               <ul class="list-unstyled">
                 <li><a href="{I18N_LANG_ROW_URL}">{I18N_LANG_ROW_TITLE}</a></li>
                 <li>{PAGE_I18N_TRANSLATE}</li>
                 <li>{PAGE_I18N_DELETE}</li>
               </ul>
+              <!-- ENDIF -->
 
               <!-- IF {PAGE_RATINGS_DISPLAY} -->
               <ul class="list-unstyled">
                 <li>{PAGE_RATINGS_DISPLAY}</li>
-                <li>{PAGE_RATINGS_AVERAGE}</li>
-                <li>{PAGE_RATINGS_COUNT}</li>
+                <li>{PHP.L.adm_ratings_totalvotes}: {PAGE_RATINGS_COUNT}</li>
               </ul>
               <!-- ENDIF -->
 

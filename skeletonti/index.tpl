@@ -2,7 +2,7 @@
       <div class="jumbotron">
         <h1>Cotonti</h1>
         <p>{PHP.L.Tagline}</p>
-        <p><a class="btn btn-lg btn-primary" href="http://www.cotonti.com">{PHP.L.View} &raquo;</a></p>
+        <p><a class="btn btn-lg btn-primary" href="http://www.cotonti.com" target="_blank">{PHP.L.View} &raquo;</a></p>
       </div>
 
       <div class="row">

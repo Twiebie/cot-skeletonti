@@ -11,7 +11,6 @@
 
       <p>{PAGE_ROW_TEXT_CUT}</p>
       <!-- IF {PAGE_ROW_TEXT_IS_CUT} -->
-      <br>
       <p><a href="{PAGE_ROW_URL}" class="btn btn-small btn-primary">{PHP.L.ReadMore}</a></p>
       <!-- ENDIF -->
 

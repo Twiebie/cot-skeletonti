@@ -18,14 +18,21 @@ Schemes=skeletonti:Default
 defined('COT_CODE') or die('Wrong URL');
 
 // Forms
-$R['input_text']     = '<input type="text" class="form-control" name="{$name}" value="{$value}" {$attrs}>';
-$R['input_password'] = '<input type="password" class="form-control" name="{$name}" value="{$value}" {$attrs}>';
-$R['input_textarea'] = '<textarea class="form-control" name="{$name}" rows="{$rows}" cols="{$cols}">{$value}</textarea>';
-$R['input_select']   = '<select name="{$name}" class="form-control" {$attrs}>{$options}</select>';
+$R['input_text']     = '<input type="text" class="form-control" name="{$name}" value="{$value}" {$attrs}>{$error}';
+$R['input_password'] = '<input type="password" class="form-control" name="{$name}" value="{$value}" {$attrs}>{$error}';
+$R['input_textarea'] = '<textarea class="form-control" name="{$name}" rows="{$rows}" cols="{$cols}">{$value}</textarea>{$error}';
+$R['input_select']   = '<select name="{$name}" class="form-control" {$attrs}>{$options}</select>{$error}';
 
-$R['input_select_rpagebegin']  = '<select name="{$name}" class="form-control">{$options}</select>{$error}';
-$R['input_select_rpageexpire'] = '<select name="{$name}" class="form-control">{$options}</select>{$error}';
-$R['input_select_rpagefile']   = '<select name="{$name}" class="form-control">{$options}</select>';
+$R['input_select_rpagebegin']  = '<div class="col-sm-2"><select name="{$name}" class="form-control">{$options}</select>{$error}</div>';
+$R['input_select_rpageexpire'] = '<div class="col-sm-2"><select name="{$name}" class="form-control">{$options}</select>{$error}</div>';
+$R['input_select_rpagefile']   = '<select name="{$name}" class="form-control">{$options}</select>{$error}';
+
+$R['input_date']       = '{$day} {$month} {$year} {$hour} {$minute}';
+$R['input_date_short'] = '{$day} {$month} {$year}';
+
+// Tags input field
+$R['tags_input_editpage'] = '<input type="text" name="rtags" size="56" class="form-control autotags" value="{$tags}">';
+$R['tags_input_editpost'] = '<input type="text" name="rtags" size="56" class="form-control autotags" value="{$tags}">';
 
 // Pagination
 $R['link_pagenav_current'] = '<li class="active"><a href="{$url}"{$event}{$rel}>{$num}</a></li>';

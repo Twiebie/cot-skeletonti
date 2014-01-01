@@ -1,7 +1,7 @@
 <!-- BEGIN: MAIN -->
       <h2>{PASSRECOVER_TITLE}</h2>
-      <!-- IF {PHP.msg} == 'request' --><p>{PHP.L.pasrec_mailsent}</p><!-- ENDIF -->
-      <!-- IF {PHP.msg} == 'auth' --><p>{PHP.L.pasrec_mailsent2}</p><!-- ENDIF -->
+      <!-- IF {PHP.msg} == 'request' --><div class="alert alert-success">{PHP.L.pasrec_mailsent}</div><!-- ENDIF -->
+      <!-- IF {PHP.msg} == 'auth' --><div class="alert alert-success">{PHP.L.pasrec_mailsent2}</div><!-- ENDIF -->
       <!-- IF !{PHP.msg} -->
       <ol>
         <li>{PHP.L.pasrec_explain1}</li>

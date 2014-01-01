@@ -12,9 +12,7 @@
               </tr>
               <tr>
                 <td>{PHP.L.Groupsmembership}:</td>
-                <td>
-                  {USERS_PROFILE_GROUPS}
-                </td>
+                <td>{USERS_PROFILE_GROUPS}</td>
               </tr>
               <tr>
                 <td>{PHP.L.Registered}:</td>
@@ -23,23 +21,16 @@
               <!-- BEGIN: USERS_PROFILE_EMAILCHANGE -->
               <tr>
                 <td>{PHP.L.Email}:</td>
-                <td id="emailtd">
-                  <div>
-                    {PHP.L.Email}:<br>{USERS_PROFILE_EMAIL}
-                  </div>
+                <td>
+                  <p>{USERS_PROFILE_EMAIL}</p>
                   <!-- BEGIN: USERS_PROFILE_EMAILPROTECTION -->
-                  <script>
-                    //<![CDATA[
-                    $(document).ready(function(){
-                      $("#emailnotes").hide();
-                      $("#emailtd").click(function(){$("#emailnotes").slideDown();});
-                    });
-                    //]]>
-                  </script>
-                  <div>
-                    {PHP.themelang.usersprofile.Emailpassword}:<br>{USERS_PROFILE_EMAILPASS}
+                  <button type="button" class="btn btn-sm btn-info" data-toggle="collapse" data-target="#changeEmail">
+                    {PHP.L.users_changeemail}
+                  </button>
+                  <div id="changeEmail" class="collapse">
+                    <p>{PHP.themelang.usersprofile_Emailpassword}: <br>{USERS_PROFILE_EMAILPASS}</p>
+                    <p>{PHP.themelang.usersprofile_Emailnotes}</p>
                   </div>
-                  <div class="text-muted" id="emailnotes">{PHP.themelang.usersprofile.Emailnotes}</div>
                   <!-- END: USERS_PROFILE_EMAILPROTECTION -->
                 </td>
               </tr>
@@ -106,20 +97,18 @@
                 <td>
                   {USERS_PROFILE_OLDPASS}
                   <p class="text-muted">{PHP.L.users_oldpasshint}</p>
-                  <p>
-                    {USERS_PROFILE_NEWPASS1}
-                  </p>
+                  <p>{USERS_PROFILE_NEWPASS1}</p>
                   {USERS_PROFILE_NEWPASS2}
                   <p class="text-muted">{PHP.L.users_newpasshint2}</p>
                 </td>
               </tr>
-              <tr>
-                <td></td>
-                <td>
-                  <input type="submit" class="btn btn-primary" value="{PHP.L.Update}">
-                </td>
-              </tr>
             </tbody>
+            <tfoot>
+              <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" class="btn btn-primary" value="{PHP.L.Update}"></td>
+              </tr>
+            </foot>
           </table>
         </div>
       </form>

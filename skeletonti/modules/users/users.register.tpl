@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-2 control-label">{USERS_REGISTER_VERIFYIMG}:</label>
+          <label class="col-md-2 control-label">{USERS_REGISTER_VERIFYIMG}</label>
           <div class="col-md-4">
             {USERS_REGISTER_VERIFYINPUT}
           </div>

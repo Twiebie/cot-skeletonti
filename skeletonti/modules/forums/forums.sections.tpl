@@ -70,7 +70,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">{PHP.L.Tags}</div>
         <div class="panel-body">
-        {FORUMS_SECTIONS_TAG_CLOUD}
+          {FORUMS_SECTIONS_TAG_CLOUD}
         </div>
       </div>
       <!-- ENDIF -->

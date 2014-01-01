@@ -23,7 +23,7 @@
           <!-- BEGIN: LIST_ROWCAT -->
           <h3><a href="{LIST_ROWCAT_URL}" title="{LIST_ROWCAT_TITLE}">{LIST_ROWCAT_TITLE}</a> ({LIST_ROWCAT_COUNT})</h3>
           <!-- IF {LIST_ROWCAT_DESC} -->
-          <small>{LIST_ROWCAT_DESC}</small>
+          <p>{LIST_ROWCAT_DESC}</p>
           <!-- ENDIF -->
           <!-- END: LIST_ROWCAT -->
 

@@ -5,25 +5,25 @@
         <h2>{PM_PAGETITLE}</h2>
 
         <div class="btn-group">
-          <a href="{PM_INBOX_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.f} == 'inbox' --> active<!-- ENDIF -->">
+          <a href="{PM_INBOX_URL}" class="btn btn-sm btn-default<!-- IF {PHP.f} == 'inbox' --> active<!-- ENDIF -->">
             {PHP.L.pm_inbox}
           </a>
-          <a href="{PM_SENTBOX_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.f} == 'sentbox' --> active<!-- ENDIF -->">
+          <a href="{PM_SENTBOX_URL}" class="btn btn-sm btn-default<!-- IF {PHP.f} == 'sentbox' --> active<!-- ENDIF -->">
             {PHP.L.pm_sentbox}
           </a>
-          <a href="{PM_SENDNEWPM_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.m} == 'send' --> active<!-- ENDIF -->">
+          <a href="{PM_SENDNEWPM_URL}" class="btn btn-sm btn-default<!-- IF {PHP.m} == 'send' --> active<!-- ENDIF -->">
             {PHP.L.Sendnew}
           </a>
         </div>
 
         <div class="btn-group pull-right">
-          <a href="{PM_FILTER_ALL_URL}" class="ajax btn btn-sm btn-default<!-- IF !{PHP.filter} --> active<!-- ENDIF -->">
+          <a href="{PM_FILTER_ALL_URL}" class="btn btn-sm btn-default<!-- IF !{PHP.filter} --> active<!-- ENDIF -->">
             {PHP.L.All}
           </a>
-          <a href="{PM_FILTER_UNREAD_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.filter} == 'unread' --> active<!-- ENDIF -->">
+          <a href="{PM_FILTER_UNREAD_URL}" class="btn btn-sm btn-default<!-- IF {PHP.filter} == 'unread' --> active<!-- ENDIF -->">
             {PHP.L.pm_unread}
           </a>
-          <a href="{PM_FILTER_STARRED_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.filter} == 'starred' --> active<!-- ENDIF -->">
+          <a href="{PM_FILTER_STARRED_URL}" class="btn btn-sm btn-default<!-- IF {PHP.filter} == 'starred' --> active<!-- ENDIF -->">
             {PHP.L.pm_starred}
           </a>
         </div>
@@ -62,9 +62,9 @@
                 <td>
                   <div class="btn-group">
                     <!-- IF {PM_ROW_EDIT_URL} -->
-                    <a class="ajax btn btn-sm btn-default" href="{PM_ROW_EDIT_URL}"><i class="glyphicon glyphicon-edit"></i> {PHP.L.Edit}</a>
+                    <a class="btn btn-sm btn-default" href="{PM_ROW_EDIT_URL}"><i class="glyphicon glyphicon-edit"></i> {PHP.L.Edit}</a>
                     <!-- ENDIF -->
-                    <a class="ajax btn btn-sm btn-danger" href="{PM_ROW_DELETE_CONFIRM_URL}"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                    <a class="btn btn-sm btn-danger" href="{PM_ROW_DELETE_CONFIRM_URL}"><i class="glyphicon glyphicon-remove-circle"></i></a>
                   </div>
                 </td>
               </tr>

@@ -5,13 +5,13 @@
         <h2>{PMSEND_TITLE}</h2>
 
         <div class="btn-group">
-          <a href="{PMSEND_INBOX_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.f} == 'inbox' --> active<!-- ENDIF -->">
+          <a href="{PMSEND_INBOX_URL}" class="btn btn-sm btn-default<!-- IF {PHP.f} == 'inbox' --> active<!-- ENDIF -->">
             {PHP.L.pm_inbox}
           </a>
-          <a href="{PMSEND_SENTBOX_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.f} == 'sentbox' --> active<!-- ENDIF -->">
+          <a href="{PMSEND_SENTBOX_URL}" class="btn btn-sm btn-default<!-- IF {PHP.f} == 'sentbox' --> active<!-- ENDIF -->">
             {PHP.L.pm_sentbox}
           </a>
-          <a href="{PMSEND_SENDNEWPM_URL}" class="ajax btn btn-sm btn-default<!-- IF {PHP.m} == 'send' --> active<!-- ENDIF -->">
+          <a href="{PMSEND_SENDNEWPM_URL}" class="btn btn-sm btn-default<!-- IF {PHP.m} == 'send' --> active<!-- ENDIF -->">
             {PHP.L.Sendnew}
           </a>
         </div>

@@ -95,15 +95,11 @@
                   </div>
                   <div class="form-group">
                     <label class="control-label">{PHP.L.Begin}:</label>
-                    <div class="row">
-                      {PAGEEDIT_FORM_BEGIN}
-                    </div>
+                    {PAGEEDIT_FORM_BEGIN}
                   </div>
                   <div class="form-group">
                     <label class="control-label">{PHP.L.Expire}:</label>
-                    <div class="row">
-                      {PAGEEDIT_FORM_EXPIRE}
-                    </div>
+                    {PAGEEDIT_FORM_EXPIRE}
                   </div>
                 </div>
               </div>

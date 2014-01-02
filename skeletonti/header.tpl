@@ -34,7 +34,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="<!-- IF {PHP.m} == 'index' OR {PHP.env.ext} == 'index' -->active<!-- ENDIF -->">
-              <a href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">{PHP.L.Home}</a>
+              <a href="{PHP.cfg.mainurl}">{PHP.L.Home}</a>
             </li>
             <li class="<!-- IF {PHP.m} == 'contact' OR {PHP.env.ext} == 'contact' -->active<!-- ENDIF -->">
               <a href="{PHP|cot_url('contact')}">{PHP.L.Contact}</a>
@@ -55,12 +55,12 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">{HEADER_USER_NAME} <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <!-- IF {HEADER_NOTICES} --><li>{HEADER_NOTICES}</li><!-- ENDIF -->
-                <!-- IF {PHP.usr.isadmin} --><li><a href="{PHP|cot_url('admin', '', '', 0, 1)}" title="{PHP.L.Administration}">{PHP.L.Administration}</a></li><!-- ENDIF -->
-                <li><a href="{PHP|cot_url('users', 'm=profile')}" title="{PHP.L.Profile}">{PHP.L.Profile}</a></li>
-                <li><a href="{PHP|cot_url('pm')}" title="{PHP.L.Messages}">{PHP.L.Messages}</a></li>
-                <li><a href="{PHP|cot_url('pfs')}" title="{PHP.L.Files}">{PHP.L.Files}</a></li>
+                <!-- IF {PHP.usr.isadmin} --><li><a href="{PHP|cot_url('admin', '', '', 0, 1)}">{PHP.L.Administration}</a></li><!-- ENDIF -->
+                <li><a href="{PHP|cot_url('users', 'm=profile')}">{PHP.L.Profile}</a></li>
+                <li><a href="{PHP|cot_url('pm')}">{PHP.L.Private_Messages}</a></li>
+                <li><a href="{PHP|cot_url('pfs')}">{PHP.L.PFS}</a></li>
                 <li class="divider"></li>
-                <li><a href="{PHP.sys.xk|cot_url('login', 'out=1&amp;x=$this', '', 0, 1)}" title="{PHP.L.Logout}">{PHP.L.Logout}</a></li>
+                <li><a href="{PHP.sys.xk|cot_url('login', 'out=1&amp;x=$this', '', 0, 1)}">{PHP.L.Logout}</a></li>
               </ul>
             </li>
             <!-- END: USER -->

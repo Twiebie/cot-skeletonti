@@ -23,12 +23,23 @@ $R['input_password'] = '<input type="password" class="form-control" name="{$name
 $R['input_textarea'] = '<textarea class="form-control" name="{$name}" rows="{$rows}" cols="{$cols}">{$value}</textarea>{$error}';
 $R['input_select']   = '<select name="{$name}" class="form-control" {$attrs}>{$options}</select>{$error}';
 
-$R['input_select_rpagebegin']  = '<div class="col-sm-2"><select name="{$name}" class="form-control">{$options}</select>{$error}</div>';
-$R['input_select_rpageexpire'] = '<div class="col-sm-2"><select name="{$name}" class="form-control">{$options}</select>{$error}</div>';
+$R['input_select_rpagebegin']  = '<select name="{$name}" class="form-control">{$options}</select>{$error}';
+$R['input_select_rpageexpire'] = '<select name="{$name}" class="form-control">{$options}</select>{$error}';
 $R['input_select_rpagefile']   = '<select name="{$name}" class="form-control">{$options}</select>{$error}';
 
-$R['input_date']       = '{$day} {$month} {$year} {$hour} {$minute}';
-$R['input_date_short'] = '{$day} {$month} {$year}';
+$R['input_date'] = '<div class="row">
+    <div class="col-sm-2">{$day}</div>
+    <div class="col-sm-4">{$month}</div>
+    <div class="col-sm-2">{$year}</div>
+    <div class="col-sm-2">{$hour}</div>
+    <div class="col-sm-2">{$minute}</div>
+</div>';
+
+$R['input_date_short'] = '<div class="row">
+    <div class="col-sm-2">{$day}</div>
+    <div class="col-sm-4">{$month}</div>
+    <div class="col-sm-4">{$year}</div>
+</div>';
 
 // Tags input field
 $R['tags_input_editpage'] = '<input type="text" name="rtags" size="56" class="form-control autotags" value="{$tags}">';

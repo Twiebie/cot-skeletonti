@@ -67,15 +67,11 @@
                 <div class="panel-body">
                   <div class="form-group">
                     <label class="control-label">{PHP.L.Begin}:</label>
-                    <div class="row">
-                      {PAGEADD_FORM_BEGIN}
-                    </div>
+                    {PAGEADD_FORM_BEGIN}
                   </div>
                   <div class="form-group">
                     <label class="control-label">{PHP.L.Expire}:</label>
-                    <div class="row">
-                      {PAGEADD_FORM_EXPIRE}
-                    </div>
+                    {PAGEADD_FORM_EXPIRE}
                   </div>
                 </div>
               </div>

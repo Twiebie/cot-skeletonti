@@ -28,7 +28,10 @@
                     {PHP.L.users_changeemail}
                   </button>
                   <div id="changeEmail" class="collapse">
-                    <p>{PHP.themelang.usersprofile_Emailpassword}: <br>{USERS_PROFILE_EMAILPASS}</p>
+                    <label>{PHP.themelang.usersprofile_Emailpassword}:</label>
+                    <div class="row">
+                      <div class="col-md-6">{USERS_PROFILE_EMAILPASS}</div>
+                    </div>
                     <p>{PHP.themelang.usersprofile_Emailnotes}</p>
                   </div>
                   <!-- END: USERS_PROFILE_EMAILPROTECTION -->
@@ -66,8 +69,7 @@
               </tr>
               <tr>
                 <td>{PHP.L.Birthdate}:</td>
-                <td>{USERS_PROFILE_BIRTHDATE}
-                </td>
+                <td>{USERS_PROFILE_BIRTHDATE}</td>
               </tr>
               <tr>
                 <td>{PHP.L.Gender}:</td>
@@ -95,10 +97,14 @@
                   <p class="text-muted">{PHP.L.users_newpasshint1}</p>
                 </td>
                 <td>
-                  {USERS_PROFILE_OLDPASS}
+                  <div class="row">
+                    <div class="col-sm-6">{USERS_PROFILE_OLDPASS}</div>
+                  </div>
                   <p class="text-muted">{PHP.L.users_oldpasshint}</p>
-                  <p>{USERS_PROFILE_NEWPASS1}</p>
-                  {USERS_PROFILE_NEWPASS2}
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">{USERS_PROFILE_NEWPASS1}</div>
+                    <div class="col-sm-6 col-md-4">{USERS_PROFILE_NEWPASS2}</div>
+                  </div>
                   <p class="text-muted">{PHP.L.users_newpasshint2}</p>
                 </td>
               </tr>

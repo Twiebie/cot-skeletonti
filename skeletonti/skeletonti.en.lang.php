@@ -27,3 +27,4 @@ $L['Contact']      = 'Contact';
 $L['ID']           = 'ID';
 $L['Notopics']     = 'There are no topics to show.';
 $L['Viewall']      = 'View all';
+$L['Sendnew']      = 'Send new';

@@ -18,6 +18,7 @@ $L['PostedOn']     = 'Posted on';
 $L['In']           = 'in';
 $L['Ago']          = 'ago';
 $L['By']           = 'by';
+$L['Since']        = 'since';
 $L['Moderation']   = 'Moderation';
 $L['MembersOnly']  = 'Members only';
 $L['RecentPages']  = 'Recent Pages';

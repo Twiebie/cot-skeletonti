@@ -22,13 +22,16 @@
                 </td>
               </tr>
               <!-- END: I18N_CATEGORY_ROW -->
-              <tr>
-                <td></td>
+              <tbody>
+              <tfoot>
+                <td>&nbsp;</td>
                 <td><input type="submit" value="{PHP.L.Update}" class="btn btn-primary"></td>
               </tr>
-            </tbody>
+            </tfoot>
           </table>
         </form>
+        <!-- IF {I18N_PAGNAV} -->
         <ul class="pagination">{I18N_PAGINATION_PREV}{I18N_PAGNAV}{I18N_PAGINATION_NEXT}</ul>
+        <!-- ENDIF -->
       </div>
 <!-- END: MAIN -->

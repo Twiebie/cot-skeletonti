@@ -9,21 +9,21 @@
           </thead>
           <tbody>
             <tr>
-              <th colspan="2"><big>{PHP.L.Title}</big></th>
+              <th colspan="2">{PHP.L.Title}</th>
             </tr>
             <tr>
-              <td><h3>{I18N_PAGE_TITLE}</h3></td>
+              <td><h4>{I18N_PAGE_TITLE}</h4></td>
               <td><input type="text" class="form-control" name="title" value="{I18N_IPAGE_TITLE}" maxlength="128" size="64"></td>
             </tr>
             <tr>
-              <th colspan="2"><big>{PHP.L.Description}</big></th>
+              <th colspan="2">{PHP.L.Description}</th>
             </tr>
             <tr>
               <td><em>{I18N_PAGE_DESC}</em></td>
               <td><textarea name="desc" class="form-control" maxlength="255" rows="4" cols="64">{I18N_IPAGE_DESC}</textarea></td>
             </tr>
             <tr>
-              <th colspan="2"><big>{PHP.L.Text}</big></th>
+              <th colspan="2">{PHP.L.Text}</th>
             </tr>
             <tr>
               <td><em>{I18N_PAGE_TEXT}</em></td>
@@ -31,18 +31,19 @@
             </tr>
             <!-- BEGIN: TAGS -->
             <tr>
-              <th colspan="2"><big>{PHP.L.Tags}</big></th>
+              <th colspan="2">{PHP.L.Tags}</th>
             </tr>
             <tr>
               <td><em>{I18N_PAGE_TAGS}</em></td>
               <td>{I18N_IPAGE_TAGS} <span class="text-muted">({PHP.L.tags_comma_separated})</span></td>
             </tr>
             <!-- END: TAGS -->
-            <tr>
-              <td></td>
+            </tbody>
+            <tfoot>
+              <td>&nbsp;</td>
               <td><input type="submit" value="{PHP.L.Submit}" class="btn btn-primary"></td>
             </tr>
-          </tbody>
+          </tfoot>
         </table>
       </form>
 <!-- END: MAIN -->

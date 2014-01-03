@@ -1,7 +1,7 @@
 <?php
 /* ====================
 [BEGIN_COT_THEME]
-Name=Skeletonti v1.0.3
+Name=Skeletonti v1.1
 Schemes=skeletonti:Default
 [END_COT_THEME]
 ==================== */

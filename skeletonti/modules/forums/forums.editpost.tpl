@@ -18,13 +18,14 @@
             <tr>
               <td colspan="2">{FORUMS_EDITPOST_TEXT}</td>
             </tr>
+
             <!-- BEGIN: POLL -->
             <tr>
               <td>{PHP.L.poll}:</td>
               <td>
-                <script type="text/javascript" src="{PHP.cfg.modules_dir}/polls/js/polls.js"></script>
+                <script type="text/javascript" src="{PHP.cfg.themes_dir}/{PHP.usr.theme}/js/polls.js"></script>
                 <script>
-                  var ansMax = {PHP.cfg.polls.max_options_polls};
+                  var pollMax = {PHP.cfg.polls.max_options_polls};
                 </script>
                 {EDIT_POLL_IDFIELD}
                 {EDIT_POLL_TEXT}
@@ -33,30 +34,41 @@
             <tr>
               <td>{PHP.L.Options}:</td>
               <td>
-                <!-- BEGIN: OPTIONS -->
-                <div class="form-group">
-                  <div class="col-md-10">
-                    {EDIT_POLL_OPTION_TEXT}
+                <div id="pollcontainer">
+                  <!-- BEGIN: OPTIONS -->
+                  <div class="polloption">
+                    <div class="row form-group">
+                      <div class="col-md-4">
+                        <div class="input-group">
+                          {EDIT_POLL_OPTION_TEXT}
+                          <span class="input-group-btn">
+                            <button name="delpollopt" type="button" class="btn btn-danger" disabled>
+                              <i class="glyphicon glyphicon-remove-circle"></i>
+                            </button>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-2">
-                    <input name="deloption" value="x" type="button" class="deloption btn btn-danger btn-xs" style="display: none;">
-                  </div>
+                  <!-- END: OPTIONS -->
                 </div>
-                <!-- END: OPTIONS -->
-                <input id="addoption" name="addoption" value="{PHP.L.Add}" type="button" class="btn btn-default" style="display: none;">
+                <button name="addpollopt" type="button" class="btn btn-default">{PHP.L.Add}</button>
               </td>
             </tr>
             <tr>
               <td></td>
-              <td>{EDIT_POLL_MULTIPLE}</td>
+              <td>
+                {EDIT_POLL_MULTIPLE}
+              </td>
             </tr>
             <!-- BEGIN: EDIT -->
             <tr>
-              <td></td>
+              <td>{PHP.L.Status}:</td>
               <td>{EDIT_POLL_LOCKED} {EDIT_POLL_RESET} {EDIT_POLL_DELETE}</td>
             </tr>
             <!-- END: EDIT -->
             <!-- END: POLL -->
+
             <!-- BEGIN: FORUMS_EDITPOST_TAGS -->
             <tr>
               <td>{PHP.L.Tags}:</td>

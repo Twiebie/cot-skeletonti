@@ -2,32 +2,32 @@
   the Window's z-index value will be set to 3000 by default (via jqModal.js). */
 
 .jqmWindow {
-  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
-  overflow: auto;
-  background-color: #fff;
-  color: #333;
-  border: 0;
+  display: none;
   padding: 50px;
   margin: 0;
+  overflow: auto;
+  color: #333;
   text-align: center;
+  background-color: #fff;
+  border: 0;
 }
 
 .jqmWindow h4 {
-  border-bottom: 1px dotted #b0c4de;
-  font-size: 14px;
-  margin: 0 0 7px 0;
   padding: 0 0 5px 0;
-  text-align: left;
+  margin: 0 0 7px 0;
+  font-size: 14px;
   color: #3E606F;
+  text-align: left;
+  border-bottom: 1px dotted #b0c4de;
 }
 
 .jqmWindow p {
-  text-align: right;
   margin: 15px 0 0 0;
   font-size: x-small;
+  text-align: right;
   text-transform: lowercase;
 }
 

@@ -57,7 +57,7 @@
         </thead>
         <!-- BEGIN: FORUMS_POSTS_ROW -->
         <tr>
-          <td class="forum-poster center">
+          <td class="forums-poster center">
             {FORUMS_POSTS_ROW_ANCHORLINK}
             <h4>{FORUMS_POSTS_ROW_USERNAME}</h4>
             <p>
@@ -74,7 +74,7 @@
             <!-- ENDIF -->
             </p>
           </td>
-          <td class="forum-post">
+          <td class="forums-post">
             <ul class="list-inline">
               <li>
                 <a name="{FORUMS_POSTS_ROW_ID}" id="{FORUMS_POSTS_ROW_POSTID}" href="{FORUMS_POSTS_ROW_IDURL}" rel="nofollow">#{FORUMS_POSTS_ROW_ORDER}</a>
@@ -100,7 +100,7 @@
             <p class="text-muted">{FORUMS_POSTS_ROW_UPDATEDBY}</p>
             <!-- ENDIF -->
             <!-- IF {FORUMS_POSTS_ROW_USERTEXT} -->
-            <p class="forum-signature">
+            <p class="forums-signature">
               {FORUMS_POSTS_ROW_USERTEXT}
             </p>
             <!-- ENDIF -->

@@ -2,32 +2,68 @@
  * Skeletonti stylesheet
  */
 
-.left { text-align: left; }
-.center { text-align: center; }
-.right { text-align: right; }
+.left {
+  text-align: left;
+}
 
-.middle { vertical-align: middle!important; }
+.center {
+  text-align: center;
+}
 
-.editor, .medieditor, .minieditor { width: 100%; }
+.right {
+  text-align: right;
+}
+
+.middle,
+.table > thead > tr > th.middle,
+.table > tbody > tr > th.middle,
+.table > tfoot > tr > th.middle,
+.table > thead > tr > td.middle,
+.table > tbody > tr > td.middle,
+.table > tfoot > tr > td.middle {
+  vertical-align: middle;
+}
+
+.editor,
+.medieditor,
+.minieditor {
+  width: 100%;
+}
+
+.form-login {
+  min-width: 200px;
+  padding: 15px;
+}
 
 /* Fix for main group list item in users profile. */
-li.list-group-item.active, li.list-group-item.active a {
+
+li.list-group-item.active,
+li.list-group-item.active a {
   color: #ffffff;
   background-color: #428bca;
   border-color: #428bca;
 }
 
 /* Forums */
-#forums-help .list-unstyled li { padding: 5px; }
 
-.forum-poster { width: 15%; }
-.forum-post p { position: relative; }
-.forum-signature {
+.forums-tab .list-unstyled li {
+  padding: 5px;
+}
+
+.forums-poster {
+  width: 15%;
+}
+
+.forums-post p {
+  position: relative;
+}
+
+.forums-signature {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
   color: #9B9B9B;
   border-top: 1px solid #EDEDED;
-  position: absolute;
-  padding: 5px 0;
-  width: 100%;
-  left: 0;
-  bottom: 0;
 }

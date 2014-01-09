@@ -50,9 +50,11 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <!-- BEGIN: USER -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">{HEADER_USER_NAME} <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- IF {PHP.usr.id} > 0 -->{HEADER_USER_NAME}<!-- ELSE -->{PHP.L.Login}<!-- ENDIF --> <b class="caret"></b>
+              </a>
+              <!-- BEGIN: USER -->
               <ul class="dropdown-menu">
                 <!-- IF {HEADER_NOTICES} --><li>{HEADER_NOTICES}</li><!-- ENDIF -->
                 <!-- IF {PHP.usr.isadmin} --><li><a href="{PHP|cot_url('admin', '', '', 0, 1)}">{PHP.L.Administration}</a></li><!-- ENDIF -->
@@ -62,20 +64,26 @@
                 <li class="divider"></li>
                 <li><a href="{PHP.sys.xk|cot_url('login', 'out=1&amp;x=$this', '', 0, 1)}">{PHP.L.Logout}</a></li>
               </ul>
+              <!-- END: USER -->
+              <!-- BEGIN: GUEST -->
+              <ul class="dropdown-menu">
+                <li class="form-login">
+                  <form action="{PHP|cot_url('login', 'a=check', '', 0, 1)}" method="post" role="form">
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="rusername" maxlength="32" placeholder="{PHP.L.Username}">
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="password" name="rpassword" maxlength="32" placeholder="{PHP.L.Password}">
+                    </div>
+                    <input type="hidden" name="rremember" value="1">
+                    <button type="submit" class="btn btn-primary">{PHP.L.Login}</button>
+                  </form>
+                </li>
+                <li><a href="{PHP|cot_url('users', 'm=register')}">{PHP.L.Register}</a></li>
+                <li><a href="{PHP|cot_url('users', 'm=passrecover')}">{PHP.L.users_lostpass}</a></li>
+              </ul>
+              <!-- END: GUEST -->
             </li>
-            <!-- END: USER -->
-            <!-- BEGIN: GUEST -->
-            <form class="navbar-form navbar-right form-inline" action="{PHP|cot_url('login', 'a=check', '', 0, 1)}" method="post" role="form">
-              <div class="form-group">
-                <input class="form-control" type="text" name="rusername" maxlength="32" placeholder="{PHP.L.Username}">
-              </div>
-              <div class="form-group">
-                <input class="form-control" type="password" name="rpassword" maxlength="32" placeholder="{PHP.L.Password}">
-              </div>
-              <input type="hidden" name="rremember" value="1">
-              <button type="submit" class="btn btn-default">{PHP.L.Login}</button>
-            </form>
-            <!-- END: GUEST -->
           </ul>
         </div>
       </div>

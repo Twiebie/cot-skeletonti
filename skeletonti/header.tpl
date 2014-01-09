@@ -21,7 +21,7 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <header class="navbar navbar-default navbar-static-top" role="banner">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,7 +31,7 @@
           </button>
           <a class="navbar-brand" href="{PHP.cfg.mainurl}" title="{PHP.cfg.maintitle} {PHP.cfg.separator} {PHP.cfg.subtitle}">{PHP.cfg.maintitle}</a>
         </div>
-        <div class="navbar-collapse collapse">
+        <nav class="navbar-collapse collapse" role="navigation">
           <ul class="nav navbar-nav">
             <li class="<!-- IF {PHP.m} == 'index' OR {PHP.env.ext} == 'index' -->active<!-- ENDIF -->">
               <a href="{PHP.cfg.mainurl}">{PHP.L.Home}</a>
@@ -85,8 +85,8 @@
               <!-- END: GUEST -->
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
     <div class="container">
 <!-- END: HEADER -->

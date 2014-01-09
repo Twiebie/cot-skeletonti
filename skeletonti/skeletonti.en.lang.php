@@ -1,14 +1,12 @@
-<?php
+<?php defined('COT_CODE') or die('Wrong URL.');
 /**
  * Skeletonti English language
  *
  * @package Cotonti
  * @author Twiebie
- * @copyright Copyright (c) 2013 Cotonti Team, Twiebie
+ * @copyright Copyright (c) 2013-2014 Cotonti Team, Twiebie
  * @license BSD
  */
-
-defined('COT_CODE') or die('Wrong URL.');
 
 $L['Tagline'] = 'Cotonti is a powerful open-source web development framework and content manager with a focus on
 security, speed and flexibility.';

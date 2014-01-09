@@ -1,7 +1,7 @@
-<?php
+<?php defined('COT_CODE') or die('Wrong URL.');
 /* ====================
 [BEGIN_COT_THEME]
-Name=Skeletonti v1.1
+Name=Skeletonti v1.2
 Schemes=skeletonti:Default
 [END_COT_THEME]
 ==================== */
@@ -11,11 +11,9 @@ Schemes=skeletonti:Default
  *
  * @package Cotonti
  * @author Twiebie
- * @copyright Copyright (c) 2013 Cotonti Team, Twiebie
+ * @copyright Copyright (c) 2013-2014 Cotonti Team, Twiebie
  * @license BSD
  */
-
-defined('COT_CODE') or die('Wrong URL');
 
 // Forms
 $R['input_text']     = '<input type="text" class="form-control" name="{$name}" value="{$value}" {$attrs}>{$error}';

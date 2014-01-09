@@ -1,14 +1,12 @@
-<?php
+<?php defined('COT_CODE') or die('Wrong URL.');
 /**
  * Skeletonti CSS and JavaScript loader
  *
  * @package Cotonti
  * @author Twiebie
- * @copyright Copyright (c) 2013 Cotonti Team, Twiebie
+ * @copyright Copyright (c) 2013-2014 Cotonti Team, Twiebie
  * @license BSD
  */
-
-defined('COT_CODE') or die('Wrong URL.');
 
 // CSS
 cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/css/bootstrap.css');

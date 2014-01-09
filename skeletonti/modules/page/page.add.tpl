@@ -16,6 +16,20 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label">{PHP.L.Description}:</label>
+              {PAGEADD_FORM_DESC}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="control-label">{PHP.L.Alias}:</label>
+              {PAGEADD_FORM_ALIAS}
+            </div>
+          </div>
+        </div>
         <div class="form-group">
           <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -30,22 +44,22 @@
                 <div class="panel-body">
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="control-label">{PHP.L.Alias}:</label>
-                        {PAGEADD_FORM_ALIAS}
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label">{PHP.L.Parser}:</label>
-                        {PAGEADD_FORM_PARSER}
-                      </div>
-                    </div>
-                    <div class="col-md-6">
                       <!-- BEGIN: TAGS -->
                       <div class="form-group">
                         <label class="control-label">{PAGEADD_TOP_TAGS}:</label>
                         {PAGEADD_FORM_TAGS} <span class="text-muted">({PAGEADD_TOP_TAGS_HINT})</span>
                       </div>
                       <!-- END: TAGS -->
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">{PHP.L.Parser}:</label>
+                        {PAGEADD_FORM_PARSER}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label">{PHP.L.Keywords}:</label>
                         {PAGEADD_FORM_KEYWORDS}

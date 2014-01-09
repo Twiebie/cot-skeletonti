@@ -94,7 +94,7 @@
         <li><a href="#forums-help" data-toggle="tab">{PHP.L.Help}</a></li>
       </ul>
 
-      <div class="tab-content">
+      <div class="tab-content forums-tab">
         <div class="tab-pane fade in active" id="forums-online">
           <h4>{PHP.L.forums_viewers}:</h4>
           <p>{FORUMS_TOPICS_VIEWER_NAMES}</p>

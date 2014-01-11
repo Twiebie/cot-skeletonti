@@ -64,3 +64,12 @@ $R['users_input_grplist_radio']    = '<div class="radio-inline"><input type="rad
 $R['pfs_link_addpix'] = '<a href="javascript:addpix(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-picture"></i></a>';
 $R['pfs_link_addthumb'] = '<a href="javascript:addthumb(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-th-large"></i></a>';
 $R['pfs_link_addfile'] = '<a href="javascript:addfile(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-file"></i></a>';
+
+// Tags
+$R['tags_code_cloud_open']  = '<ul class="list-inline tag_cloud">';
+$R['tags_link_cloud_tag']   = '<li><a href="{$url}" class="{$dim}" title="{$tag_title}" rel="tag">{$tag_title}</a></li>';
+$R['tags_code_cloud_close'] = '</ul>';
+$R['tags_code_cloud_more']  = '<a class="btn btn-sm btn-default" href="{$url}">'.$L['tags_All'].'</a>';
+$R['tags_link_tag']         = '<a href="{$url}" title="{$tag_title}" rel="tag">{$tag_title}</a>';
+$R['tags_input_editpage']   = '<input type="text" name="rtags" size="56" class="form-control autotags" value="{$tags}">';
+$R['tags_input_editpost']   = '<input type="text" name="rtags" size="56" class="form-control autotags" value="{$tags}">';

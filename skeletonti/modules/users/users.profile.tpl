@@ -114,7 +114,7 @@
                 <td>&nbsp;</td>
                 <td><input type="submit" class="btn btn-primary" value="{PHP.L.Update}"></td>
               </tr>
-            </foot>
+            </tfoot>
           </table>
         </div>
       </form>

@@ -20,14 +20,9 @@
         <a href="{PHP.mode|cot_url('plug','e=recentitems&amp;days=30$this')}" class="btn btn-default<!-- IF {PHP._GET.days} == 30 --> active<!-- ENDIF -->" rel="nofollow">{PHP.L.recentitems_1month}</a>
       </div>
 
-      <div class="col-md-12">
-        <div class="row">
-          {RECENT_PAGES}
-        </div>
-        <div class="row">
-          {RECENT_FORUMS}
-        </div>
-      </div>
+      {RECENT_PAGES}
+      {RECENT_FORUMS}
+
       <!-- IF {PAGE_PAGENAV} -->
       <ul class="pagination">{PAGE_PAGEPREV}{PAGE_PAGENAV}{PAGE_PAGENEXT}</ul>
       <!-- ENDIF -->

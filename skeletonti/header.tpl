@@ -67,7 +67,7 @@
               <!-- END: USER -->
               <!-- BEGIN: GUEST -->
               <ul class="dropdown-menu">
-                <li class="form-login">
+                <li class="nav-login">
                   <form action="{PHP|cot_url('login', 'a=check', '', 0, 1)}" method="post" role="form">
                     <div class="form-group">
                       <input class="form-control" type="text" name="rusername" maxlength="32" placeholder="{PHP.L.Username}">

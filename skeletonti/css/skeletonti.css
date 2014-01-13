@@ -6,13 +6,17 @@
   text-align: left;
 }
 
-.center {
-  text-align: center;
-}
-
 .right {
   text-align: right;
 }
+
+/* Header */
+
+.nav-login {
+  padding: 15px;
+}
+
+/* Tables */
 
 .middle,
 .table > thead > tr > th.middle,
@@ -24,24 +28,34 @@
   vertical-align: middle;
 }
 
-.editor,
-.medieditor,
-.minieditor {
-  width: 100%;
-}
+/* Borderless table */
 
-.form-login {
-  min-width: 200px;
-  padding: 15px;
+.table.table-borderless td,
+.table.table-borderless th {
+  border-top: 0;
 }
 
 /* Fix for main group list item in users profile. */
 
 li.list-group-item.active,
 li.list-group-item.active a {
-  color: #ffffff;
+  color: #fff;
   background-color: #428bca;
   border-color: #428bca;
+}
+
+/* Pages */
+
+.pagerow h3:first-child {
+  margin-top: 0;
+}
+
+.pageside h4:first-child {
+  margin-top: 0;
+}
+
+.pagelabel {
+  font-size: 50%;
 }
 
 /* Forums */
@@ -64,6 +78,12 @@ li.list-group-item.active a {
   left: 0;
   width: 100%;
   padding: 5px 0;
-  color: #9B9B9B;
-  border-top: 1px solid #EDEDED;
+  color: #9b9b9b;
+  border-top: 1px solid #ededed;
+}
+
+/* Error (error.tpl) */
+
+.errortpl {
+  margin-top: 50px;
 }

@@ -1,4 +1,9 @@
 <!-- BEGIN: MAIN -->
+      <div class="page-header">
+        <h1>{FORUMS_POSTS_SHORTTITLE}</h1>
+        <p>{FORUMS_POSTS_PAGETITLE}</p>
+      </div>
+
       <!-- BEGIN: FORUMS_POSTS_TOPICPRIVATE -->
       <div class="alert alert-warning">{PHP.L.forums_privatetopic}</div>
       <!-- END: FORUMS_POSTS_TOPICPRIVATE -->
@@ -8,7 +13,6 @@
       {POLLS_FORM}
       <!-- END: POLLS_VIEW -->
 
-      <h3>{FORUMS_POSTS_PAGETITLE}</h3>
       <!-- BEGIN: FORUMS_POSTS_ADMIN -->
       <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#admin-forum-options">
         {PHP.L.Moderation} <b class="caret"></b>
@@ -52,61 +56,65 @@
 
       <table class="table table-striped">
         <thead>
-          <th>{PHP.L.Author}</th>
+          <th><center>{PHP.L.Author}</center></th>
           <th>{PHP.L.Message}</th>
         </thead>
-        <!-- BEGIN: FORUMS_POSTS_ROW -->
-        <tr>
-          <td class="forums-poster center">
-            {FORUMS_POSTS_ROW_ANCHORLINK}
-            <h4>{FORUMS_POSTS_ROW_USERNAME}</h4>
-            <p>
-            <!-- IF {FORUMS_POSTS_ROW_USERAVATAR} -->
-            <a href="{FORUMS_POSTS_ROW_USERDETAILSLINK}">
-              {FORUMS_POSTS_ROW_USERAVATAR}
-            </a>
-            <!-- ELSE -->
-            {PHP.R.forums_noavatar}
-            <!-- ENDIF -->
-            <p>{FORUMS_POSTS_ROW_USERMAINGRPTITLE}</p>
-            <!-- IF {FORUMS_POSTS_ROW_USERONLINE} == 1 -->
-            <p class="label label-success">{FORUMS_POSTS_ROW_USERONLINETITLE}</p>
-            <!-- ENDIF -->
-            </p>
-          </td>
-          <td class="forums-post">
-            <ul class="list-inline">
-              <li>
-                <a name="{FORUMS_POSTS_ROW_ID}" id="{FORUMS_POSTS_ROW_POSTID}" href="{FORUMS_POSTS_ROW_IDURL}" rel="nofollow">#{FORUMS_POSTS_ROW_ORDER}</a>
-              </li>
-              <li>{FORUMS_POSTS_ROW_CREATION}</li>
-              <!-- IF {FORUMS_POSTS_ROW_POSTERIP} -->
-              <li>{FORUMS_POSTS_ROW_POSTERIP}</li>
-              <!-- ENDIF -->
-              <!-- IF {FORUMS_POSTS_ROW_QUOTE} -->
-              <li>{FORUMS_POSTS_ROW_QUOTE}</li>
-              <!-- ENDIF -->
-              <!-- IF {FORUMS_POSTS_ROW_EDIT} -->
-              <li>{FORUMS_POSTS_ROW_EDIT}</li>
-              <!-- ENDIF -->
-              <!-- IF {FORUMS_POSTS_ROW_DELETE} -->
-              <li>{FORUMS_POSTS_ROW_DELETE}</li>
-              <!-- ENDIF -->
-            </ul>
+        <tbody>
+          <!-- BEGIN: FORUMS_POSTS_ROW -->
+          <tr>
+            <td class="forums-poster">
+              <center>
+                {FORUMS_POSTS_ROW_ANCHORLINK}
+                <h4>{FORUMS_POSTS_ROW_USERNAME}</h4>
+                <p>
+                <!-- IF {FORUMS_POSTS_ROW_USERAVATAR} -->
+                <a href="{FORUMS_POSTS_ROW_USERDETAILSLINK}">
+                  {FORUMS_POSTS_ROW_USERAVATAR}
+                </a>
+                <!-- ELSE -->
+                {PHP.R.forums_noavatar}
+                <!-- ENDIF -->
+                <p>{FORUMS_POSTS_ROW_USERMAINGRPTITLE}</p>
+                <!-- IF {FORUMS_POSTS_ROW_USERONLINE} == 1 -->
+                <p class="label label-success">{FORUMS_POSTS_ROW_USERONLINETITLE}</p>
+                <!-- ENDIF -->
+                </p>
+              </center>
+            </td>
+            <td class="forums-post">
+              <ul class="list-inline small">
+                <li>
+                  <a name="{FORUMS_POSTS_ROW_ID}" id="{FORUMS_POSTS_ROW_POSTID}" href="{FORUMS_POSTS_ROW_IDURL}" rel="nofollow">#{FORUMS_POSTS_ROW_ORDER}</a>
+                </li>
+                <li>{FORUMS_POSTS_ROW_CREATION}</li>
+                <!-- IF {FORUMS_POSTS_ROW_POSTERIP} -->
+                <li>{FORUMS_POSTS_ROW_POSTERIP}</li>
+                <!-- ENDIF -->
+                <!-- IF {FORUMS_POSTS_ROW_QUOTE} -->
+                <li>{FORUMS_POSTS_ROW_QUOTE}</li>
+                <!-- ENDIF -->
+                <!-- IF {FORUMS_POSTS_ROW_EDIT} -->
+                <li>{FORUMS_POSTS_ROW_EDIT}</li>
+                <!-- ENDIF -->
+                <!-- IF {FORUMS_POSTS_ROW_DELETE} -->
+                <li>{FORUMS_POSTS_ROW_DELETE}</li>
+                <!-- ENDIF -->
+              </ul>
 
-            {FORUMS_POSTS_ROW_TEXT}
+              {FORUMS_POSTS_ROW_TEXT}
 
-            <!-- IF {FORUMS_POSTS_ROW_UPDATEDBY} -->
-            <p class="text-muted">{FORUMS_POSTS_ROW_UPDATEDBY}</p>
-            <!-- ENDIF -->
-            <!-- IF {FORUMS_POSTS_ROW_USERTEXT} -->
-            <p class="forums-signature">
-              {FORUMS_POSTS_ROW_USERTEXT}
-            </p>
-            <!-- ENDIF -->
-          </td>
-        </tr>
-        <!-- END: FORUMS_POSTS_ROW -->
+              <!-- IF {FORUMS_POSTS_ROW_UPDATEDBY} -->
+              <p class="text-muted small">{FORUMS_POSTS_ROW_UPDATEDBY}</p>
+              <!-- ENDIF -->
+              <!-- IF {FORUMS_POSTS_ROW_USERTEXT} -->
+              <p class="forums-signature text-muted small">
+                {FORUMS_POSTS_ROW_USERTEXT}
+              </p>
+              <!-- ENDIF -->
+            </td>
+          </tr>
+          <!-- END: FORUMS_POSTS_ROW -->
+        </tbody>
       </table>
 
       <!-- IF {FORUMS_POSTS_PAGES} -->
@@ -118,7 +126,7 @@
       <!-- END: FORUMS_POSTS_TOPICLOCKED -->
 
       <!-- BEGIN: FORUMS_POSTS_ANTIBUMP -->
-      <p>{FORUMS_POSTS_ANTIBUMP_BODY}</p>
+      <div class="alert alert-warning">{FORUMS_POSTS_ANTIBUMP_BODY}</div>
       <!-- END: FORUMS_POSTS_ANTIBUMP -->
 
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
@@ -127,9 +135,9 @@
       <form action="{FORUMS_POSTS_NEWPOST_SEND}" method="post" name="newpost" role="form">
         {FORUMS_POSTS_NEWPOST_TEXT}
         {FORUMS_POSTS_NEWPOST_MYPFS}
-        <p class="center">
+        <center>
           <button type="submit" class="btn btn-primary">{PHP.L.Reply}</button>
-        </p>
+        </center>
       </form>
       <!-- END: FORUMS_POSTS_NEWPOST -->
 <!-- END: MAIN -->

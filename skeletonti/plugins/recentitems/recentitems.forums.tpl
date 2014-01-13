@@ -1,5 +1,5 @@
 <!-- BEGIN: MAIN -->
-      <h3><a href="{PHP|cot_url('forums')}">{PHP.L.Forums}</a></h3>
+      <h2>{PHP.L.Forums}</h2>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -12,17 +12,20 @@
           <tbody>
             <!-- BEGIN: TOPICS_ROW -->
             <tr>
-              <td>{FORUM_ROW_ICON}</td>
+              <td class="middle">
+                <center>{FORUM_ROW_ICON}</center>
+              </td>
               <td>
                 <h4><a href="{FORUM_ROW_URL}">{FORUM_ROW_TITLE}</a></h4>
                 <p>{FORUM_ROW_PATH}</p>
                 <p>
-                  {FORUM_ROW_CREATIONDATE}<span class="spaced">{PHP.cfg.separator}</span>{FORUM_ROW_FIRSTPOSTER}<!-- IF {FORUM_ROW_PAGES} --><span class="spaced">{PHP.cfg.separator}</span>{FORUM_ROW_PAGES}<!-- ENDIF -->
+                  {PHP.L.PostedOn} {FORUM_ROW_CREATIONDATE} {PHP.L.By} {FORUM_ROW_FIRSTPOSTER}
+                  <!-- IF {FORUM_ROW_PAGES} -->{FORUM_ROW_PAGES}<!-- ENDIF -->
                 </p>
               </td>
               <td>
-                {FORUM_ROW_UPDATED}<span class="spaced">{PHP.cfg.separator}</span>{FORUM_ROW_LASTPOSTER}<br />
-                {FORUM_ROW_TIMEAGO}
+                <p>{FORUM_ROW_UPDATED}</p>
+                <p>{FORUM_ROW_TIMEAGO} {PHP.L.Ago} {PHP.L.By} {FORUM_ROW_LASTPOSTER}</p>
               </td>
               <td>{FORUM_ROW_POSTCOUNT}</td>
               <td>{FORUM_ROW_VIEWCOUNT}</td>

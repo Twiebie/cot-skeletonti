@@ -18,34 +18,37 @@
   </head>
   <body>
   <!-- END: STANDALONE_HEADER -->
-    <h3>{PFS_TITLE}</h3>
-    <p>{PFS_SUBTITLE}</p>
+    <div class="page-header">
+      <h1>{PFS_TITLE}</h1>
+      <p>{PFS_SUBTITLE}</p>
+    </div>
+
     {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
     <form id="edit" action="{PFS_ACTION}" method="post" role="form">
       <div class="form-group">
-        <label class="control-label">{PHP.L.File}</label>
+        <label>{PHP.L.File}</label>
         <p>{PFS_FILE}</p>
       </div>
       <div class="form-group">
-        <label class="control-label">{PHP.L.Date}</label>
+        <label>{PHP.L.Date}</label>
         <p>{PFS_DATE}</p>
       </div>
       <div class="form-group">
-        <label class="control-label">{PHP.L.URL}</label>
+        <label>{PHP.L.URL}</label>
         <p><a href="{PFS_URL}">{PFS_URL}</a></p>
       </div>
       <div class="form-group">
-        <label class="control-label">{PHP.L.Size}</label>
+        <label>{PHP.L.Size}</label>
         <p>{PFS_SIZE}</p>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label class="control-label">{PHP.L.Folder}</label>
+            <label>{PHP.L.Folder}</label>
             {PFS_FOLDER}
           </div>
           <div class="form-group">
-            <label class="control-label">{PHP.L.Description}</label>
+            <label>{PHP.L.Description}</label>
             {PFS_DESC}
           </div>
         </div>

@@ -1,5 +1,8 @@
 <!-- BEGIN: MAIN -->
-      <h2>{USERS_PROFILE_TITLE}</h2>
+      <div class="page-header">
+        <h1>{USERS_PROFILE_TITLE}</h1>
+      </div>
+
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
       <form action="{USERS_PROFILE_FORM_SEND}" method="post" enctype="multipart/form-data" name="profile" role="form">
         <input type="hidden" name="userid" value="{USERS_PROFILE_ID}">

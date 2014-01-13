@@ -1,15 +1,17 @@
 <!-- BEGIN: MAIN -->
-      <div class="row">
-        <div class="col-md-6">
-          <h2>{PLUGIN_TITLE}</h2>
+      <div class="page-header">
+        <h1>{PLUGIN_TITLE}</h1>
+      </div>
 
-          <form id="search" name="search" action="{PLUGIN_SEARCH_ACTION}" method="get" role="form">
+      <form id="search" name="search" action="{PLUGIN_SEARCH_ACTION}" method="get" role="form">
+        <div class="row">
+          <div class="col-md-6">
             <input type="hidden" name="e" value="search">
             <div class="form-group">
               <div class="input-group">
                 {PLUGIN_SEARCH_TEXT}
                 <span class="input-group-btn">
-                  <input type="submit" class="btn btn-primary" value="{PHP.L.plu_search_key}">
+                  <input type="submit" class="btn btn-primary" value="{PHP.L.Search}">
                 </span>
               </div>
             </div>
@@ -74,60 +76,89 @@
             <!-- IF {PLUGIN_PAGENAV} -->
             <ul class="pagination">{PLUGIN_PAGEPREV}{PLUGIN_PAGENAV}{PLUGIN_PAGENEXT}</ul>
             <!-- ENDIF -->
-        </div>
+          </div>
 
-        <!-- IF {PHP.cfg.plugin.search.extrafilters} -->
-        <div class="col-md-6">
-          <h3>{PHP.L.Filter}</h3>
-          <!-- BEGIN: PAGES_OPTIONS -->
-          <div class="panel panel-default">
-            <div class="panel-heading">{PHP.L.Pages}</div>
-            <div class="panel-body">
-              <div class="col-md-6">
-                <strong>{PHP.L.plu_pag_set_sec}:</strong>
-                <p>{PLUGIN_PAGE_SEC_LIST}</p>
-                <p>{PLUGIN_PAGE_SEARCH_SUBCAT}</p>
-                <small>{PHP.L.plu_ctrl_list}</small>
-              </div>
-              <div class="col-md-6">
-                <strong>{PHP.L.plu_other_opt}:</strong>
-                <p><label>{PLUGIN_PAGE_SEARCH_NAMES} {PHP.L.plu_pag_search_names}</label></p>
-                <p>{PLUGIN_PAGE_SEARCH_DESC}</p>
-                <p>{PLUGIN_PAGE_SEARCH_TEXT}</p>
-                <p>{PLUGIN_PAGE_SEARCH_FILE}</p>
-                <strong>{PHP.L.plu_res_sort}:</strong>
-                <p>{PLUGIN_PAGE_RES_SORT}</p>
-                <p>{PLUGIN_PAGE_RES_SORT_WAY}</p>
+          <!-- IF {PHP.cfg.plugin.search.extrafilters} -->
+          <div class="col-md-6 pageside">
+            <h4>{PHP.L.Filter}</h4>
+            <!-- BEGIN: PAGES_OPTIONS -->
+            <div class="panel panel-default">
+              <div class="panel-heading">{PHP.L.Pages}</div>
+              <div class="panel-body">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>{PHP.L.plu_pag_set_sec}:</label>
+                    {PLUGIN_PAGE_SEC_LIST}
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_PAGE_SEARCH_SUBCAT}</label>
+                    <p class="help-block">{PHP.L.plu_ctrl_list}</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h4>{PHP.L.plu_other_opt}:</h4>
+                  <div class="checkbox">
+                    <label>{PLUGIN_PAGE_SEARCH_NAMES}</label>
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_PAGE_SEARCH_DESC}</label>
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_PAGE_SEARCH_TEXT}</label>
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_PAGE_SEARCH_FILE}</label>
+                  </div>
+                  <div class="form-group">
+                    <label>{PHP.L.plu_res_sort}:</label>
+                    {PLUGIN_PAGE_RES_SORT}
+                  </div>
+                  <div class="form-group">
+                    {PLUGIN_PAGE_RES_SORT_WAY}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- END: PAGES_OPTIONS -->
+            <!-- END: PAGES_OPTIONS -->
 
-          <!-- BEGIN: FORUMS_OPTIONS -->
-          <div class="panel panel-default">
-            <div class="panel-heading">{PHP.L.Forums}</div>
-            <div class="panel-body">
-              <div class="col-md-6">
-                <strong>{PHP.L.plu_frm_set_sec}:</strong>
-                <p>{PLUGIN_FORUM_SEC_LIST}</p>
-                <p>{PLUGIN_FORUM_SEARCH_SUBCAT}</p>
-                <small>{PHP.L.plu_ctrl_list}</small>
-              </div>
-              <div class="col-md-6">
-                <strong>{PHP.L.plu_other_opt}:</strong>
-                <p>{PLUGIN_FORUM_SEARCH_NAMES}</p>
-                <p>{PLUGIN_FORUM_SEARCH_POST}</p>
-                <p>{PLUGIN_FORUM_SEARCH_ANSW}</p>
-                <strong>{PHP.L.plu_res_sort}:</strong>
-                <p>{PLUGIN_FORUM_RES_SORT}</p>
-                <p>{PLUGIN_FORUM_RES_SORT_WAY}</p>
+            <!-- BEGIN: FORUMS_OPTIONS -->
+            <div class="panel panel-default">
+              <div class="panel-heading">{PHP.L.Forums}</div>
+              <div class="panel-body">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>{PHP.L.plu_frm_set_sec}:</label>
+                    {PLUGIN_FORUM_SEC_LIST}
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_FORUM_SEARCH_SUBCAT}</label>
+                    <p class="help-block">{PHP.L.plu_ctrl_list}</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h4>{PHP.L.plu_other_opt}:</h4>
+                  <div class="checkbox">
+                    <label>{PLUGIN_FORUM_SEARCH_NAMES}</label>
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_FORUM_SEARCH_POST}</label>
+                  </div>
+                  <div class="checkbox">
+                    <label>{PLUGIN_FORUM_SEARCH_ANSW}</label>
+                  </div>
+                  <div class="form-group">
+                    <label>{PHP.L.plu_res_sort}:</label>
+                    {PLUGIN_FORUM_RES_SORT}
+                  </div>
+                  <div class="form-group">
+                    {PLUGIN_FORUM_RES_SORT_WAY}
+                  </div>
+                </div>
               </div>
             </div>
+            <!-- END: FORUMS_OPTIONS -->
           </div>
-          <!-- END: FORUMS_OPTIONS -->
+          <!-- ENDIF -->
         </div>
-        <!-- ENDIF -->
-
-          </form>
-      </div><!-- /.row -->
+      </form>
 <!-- END: MAIN -->

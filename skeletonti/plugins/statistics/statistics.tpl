@@ -1,9 +1,11 @@
 <!-- BEGIN: MAIN -->
+      <div class="page-header">
+        <h1>{PHP.L.Statistics}</h1>
+      </div>
+
       <div class="row">
         <div class="col-md-12">
-          <h2>{PHP.L.Statistics}</h2>
-          <h3>{PHP.L.Main}:</h3>
-          <div class="alert alert-info">{PHP.L.plu_maxwasreached} <strong>{STATISTICS_MAX_DATE}</strong>, <strong>{STATISTICS_MAX_HITS}</strong> {PHP.L.plu_pagesdisplayedthisday}</div>
+          <div class="alert alert-info">{PHP.L.plu_maxwasreached} <strong>{STATISTICS_MAX_DATE}</strong>, <strong>{STATISTICS_MAX_HITS}</strong> {PHP.L.plu_pagesdisplayedthisday}.</div>
           <table class="table table-striped">
             <tr>
               <td>{PHP.L.plu_totalpagessince} {STATISTICS_SINCE}</td>

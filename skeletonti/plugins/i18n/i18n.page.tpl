@@ -1,5 +1,8 @@
 <!-- BEGIN: MAIN -->
-      <h2>{I18N_TITLE}</h2>
+      <div class="page-header">
+        <h1>{I18N_TITLE}</h1>
+      </div>
+
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
       <form action="{I18N_ACTION}" method="post" role="form">
         <table class="table table-striped">
@@ -35,7 +38,10 @@
             </tr>
             <tr>
               <td><em>{I18N_PAGE_TAGS}</em></td>
-              <td>{I18N_IPAGE_TAGS} <span class="text-muted">({PHP.L.tags_comma_separated})</span></td>
+              <td>
+                {I18N_IPAGE_TAGS}
+                <p class="help-block">{PHP.L.tags_comma_separated}</p>
+              </td>
             </tr>
             <!-- END: TAGS -->
             </tbody>

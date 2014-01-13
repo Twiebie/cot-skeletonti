@@ -2,7 +2,7 @@
       <div id="poll_{POLL_ID}">
         <form action="{POLL_FORM_URL}" method="post" id="poll_form_{POLL_ID}" class="ajax post-poll_{POLL_ID};index.php;e=polls&amp;mode=ajax&amp;poll_theme=index" role="form">
           <input type="hidden" name="poll_id" value="{POLL_ID}">
-          <table style="table">
+          <table>
             <!-- BEGIN: POLLTABLE -->
             <tr>
               <td>{POLL_INPUT}</td>
@@ -19,7 +19,7 @@
       <!-- END: POLL_VIEW -->
 
       <!-- BEGIN: POLL_VIEW_VOTED -->
-      <table class="table table-condensed">
+      <table class="table table-borderless">
         <!-- BEGIN: POLLTABLE -->
         <tr>
           <td>
@@ -47,7 +47,7 @@
       <!-- END: POLL_VIEW_VOTED -->
 
       <!-- BEGIN: POLL_VIEW_DISABLED -->
-      <table class="table table-condensed">
+      <table class="table table-borderless">
         <!-- BEGIN: POLLTABLE -->
         <tr>
           <td>{POLL_OPTIONS}</td>
@@ -60,7 +60,7 @@
       <!-- END: POLL_VIEW_DISABLED -->
 
       <!-- BEGIN: POLL_VIEW_LOCKED -->
-      <table class="table table-condensed">
+      <table class="table table-borderless">
         <!-- BEGIN: POLLTABLE -->
         <tr>
           <td>
@@ -75,16 +75,16 @@
         </tr>
         <!-- END: POLLTABLE -->
       </table>
-      <p>{PHP.L.Date} {POLL_SINCE_SHORT} {PHP.L.Votes} {POLL_VOTERS} </p>
+      <p>{PHP.L.Date} {POLL_SINCE_SHORT} {PHP.L.Votes} {POLL_VOTERS}</p>
       <!-- END: POLL_VIEW_LOCKED -->
 
       <!-- BEGIN: INDEXPOLLS -->
       <!-- BEGIN: POLL -->
-      <h4><a href="{IPOLLS_URL}">{IPOLLS_TITLE}</a></h4>
+      <h3><a href="{IPOLLS_URL}">{IPOLLS_TITLE}</a></h3>
       {IPOLLS_FORM}
       <!-- END: POLL -->
       <!-- BEGIN: ERROR -->
-      <p class="center">{IPOLLS_ERROR}</p>
+      <p><center>{IPOLLS_ERROR}</center></p>
       <!-- END: ERROR -->
-      <p class="center"><a href="{IPOLLS_ALL}">{PHP.L.polls_viewarchives}</a></p>
+      <p><center><a href="{IPOLLS_ALL}">{PHP.L.polls_viewarchives}</a></center></p>
       <!-- END: INDEXPOLLS -->

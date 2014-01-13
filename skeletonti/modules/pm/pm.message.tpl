@@ -2,7 +2,9 @@
       <!-- BEGIN: BEFORE_AJAX -->
       <div id="ajaxBlock">
       <!-- END: BEFORE_AJAX -->
-        <h2>{PM_PAGETITLE}</h2>
+        <div class="page-header">
+          <h1>{PM_PAGETITLE}</h1>
+        </div>
 
         <table class="table">
           <tr>
@@ -53,7 +55,7 @@
               <input type="checkbox" name="fromstate" value="3"> {PHP.L.pm_notmovetosentbox}
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">{PHP.L.Reply}</button>
+          <center><button type="submit" class="btn btn-primary">{PHP.L.Reply}</button></center>
         </form>
         <!-- END: REPLY -->
 
@@ -89,9 +91,8 @@
         </script>
         <!-- ENDIF -->
         <!-- IF {PHP.cfg.jquery} AND {PHP.cfg.pm.turnajax} -->
-        <script type="text/javascript" src="{PHP.cfg.modules_dir}/pm/js/pm.js"></script>
+        <script src="{PHP.cfg.modules_dir}/pm/js/pm.js"></script>
         <!-- ENDIF -->
-
       <!-- BEGIN: AFTER_AJAX -->
       </div>
       <!-- END: AFTER_AJAX -->

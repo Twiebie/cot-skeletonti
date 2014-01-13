@@ -1,5 +1,5 @@
 <!-- BEGIN: MAIN -->
-      <h3><a href="{PHP|cot_url('index')}">{PHP.L.Pages}</a></h3>
+      <h2>{PHP.L.Pages}</h2>
       <div class="table-responsive">
         <table class="table table-striped">
           <thead>
@@ -11,13 +11,15 @@
           <tbody>
             <!-- BEGIN: PAGE_ROW -->
             <tr>
-              <td class="center">{PHP.R.icon_page}</td>
+              <td class="middle">
+                <center>{PHP.R.icon_page}</center>
+              </td>
               <td>
                 <h4><a href="{PAGE_ROW_URL}">{PAGE_ROW_SHORTTITLE}</a></h4>
-                <!-- IF {PAGE_ROW_DESC} --><small>{PAGE_ROW_DESC}</small><!-- ENDIF -->
-                <small>{PAGE_ROW_CATPATH}</small>
+                <!-- IF {PAGE_ROW_DESC} --><p>{PAGE_ROW_DESC}</p><!-- ENDIF -->
+                <p>{PHP.L.PostedOn} {PAGE_ROW_DATE} {PHP.L.In} {PAGE_ROW_CATPATH}</p>
               </td>
-              <td>{PAGE_ROW_DATE}: {PAGE_ROW_OWNER}</td>
+              <td>{PAGE_ROW_OWNER}</td>
               <td>{PAGE_ROW_COUNT}</td>
             </tr>
             <!-- END: PAGE_ROW -->

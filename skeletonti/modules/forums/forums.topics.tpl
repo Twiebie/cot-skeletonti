@@ -1,5 +1,9 @@
 <!-- BEGIN: MAIN -->
-      <h3>{FORUMS_TOPICS_PAGETITLE}</h3>
+      <div class="page-header">
+        <h1>{FORUMS_TOPICS_SHORTTITLE}</h1>
+        <p>{FORUMS_TOPICS_PAGETITLE}</p>
+      </div>
+
       <!-- BEGIN: FORUMS_SECTIONS -->
       <div class="table-responsive">
         <table class="table table-striped">
@@ -12,8 +16,8 @@
           </thead>
           <!-- BEGIN: FORUMS_SECTIONS_ROW_SECTION -->
           <tr>
-            <td class="middle center">
-              {PHP.R.icon_subfolder}
+            <td class="middle">
+              <center>{PHP.R.icon_subfolder}</center>
             </td>
             <td>
               <h4><a href="{FORUMS_SECTIONS_ROW_URL}">{FORUMS_SECTIONS_ROW_TITLE}</a></h4>
@@ -21,8 +25,8 @@
             </td>
             <td>
               <!-- IF {FORUMS_SECTIONS_ROW_LASTPOST} -->
-              {FORUMS_SECTIONS_ROW_LASTPOST}<br>
-              {FORUMS_SECTIONS_ROW_LASTPOSTER} {FORUMS_SECTIONS_ROW_TIMEAGO}
+              {FORUMS_SECTIONS_ROW_LASTPOST}
+              <p>{FORUMS_SECTIONS_ROW_TIMEAGO} {PHP.L.Ago} {PHP.L.By} {FORUMS_SECTIONS_ROW_LASTPOSTER}</p>
               <!-- ELSE -->
               <span class="text-muted">{PHP.L.None}</span>
               <!-- ENDIF -->
@@ -61,30 +65,34 @@
           </thead>
           <!-- BEGIN: FORUMS_TOPICS_ROW -->
           <tr>
-            <td class="middle center">{FORUMS_TOPICS_ROW_ICON}</td>
+            <td class="middle">
+              <center>{FORUMS_TOPICS_ROW_ICON}</center>
+            </td>
             <td>
               <h4><a href="{FORUMS_TOPICS_ROW_URL}" title="{FORUMS_TOPICS_ROW_PREVIEW}">{FORUMS_TOPICS_ROW_TITLE}</a></h4>
               <!-- IF {FORUMS_TOPICS_ROW_DESC} --><p>{FORUMS_TOPICS_ROW_DESC}</p><!-- ENDIF -->
-              <small>{FORUMS_TOPICS_ROW_CREATIONDATE} {FORUMS_TOPICS_ROW_FIRSTPOSTER}</small>
+              <small>{FORUMS_TOPICS_ROW_CREATIONDATE} {PHP.L.By} {FORUMS_TOPICS_ROW_FIRSTPOSTER}</small>
               <small>{FORUMS_TOPICS_ROW_PAGES}</small>
             </td>
-            <td>
+            <td class="middle">
               {FORUMS_TOPICS_ROW_UPDATED}
               <p>{FORUMS_TOPICS_ROW_TIMEAGO} {PHP.L.Ago} {PHP.L.By} {FORUMS_TOPICS_ROW_LASTPOSTER}</p>
             </td>
-            <td>
+            <td class="middle">
               {FORUMS_TOPICS_ROW_POSTCOUNT}
             </td>
-            <td>
+            <td class="middle">
               {FORUMS_TOPICS_ROW_VIEWCOUNT}
             </td>
           </tr>
           <!-- END: FORUMS_TOPICS_ROW -->
         </table>
       </div>
+      <!-- IF {FORUMS_TOPICS_PAGES} -->
       <ul class="pagination">
         {FORUMS_TOPICS_PAGEPREV}{FORUMS_TOPICS_PAGES}{FORUMS_TOPICS_PAGENEXT}
       </ul>
+      <!-- ENDIF -->
       <!-- ELSE -->
       <div class="alert alert-info">{PHP.L.Notopics}</div>
       <!-- ENDIF -->

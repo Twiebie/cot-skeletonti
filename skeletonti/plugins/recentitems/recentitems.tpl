@@ -1,5 +1,7 @@
 <!-- BEGIN: MAIN -->
-      <h3>{PHP.L.recentitems_title}</h3>
+      <div class="page-header">
+        <h1>{PHP.L.recentitems_title}</h1>
+      </div>
 
       <div class="btn-group btn-group-md">
         <a href="{PHP.days|cot_url('plug','e=recentitems$this')}" class="btn btn-default<!-- IF !{PHP.mode} --> active<!-- ENDIF -->" rel="nofollow">{PHP.L.All}</a>
@@ -26,5 +28,7 @@
           {RECENT_FORUMS}
         </div>
       </div>
-      <!-- IF {PAGE_PAGENAV} --><ul class="pagination">{PAGE_PAGEPREV}{PAGE_PAGENAV}{PAGE_PAGENEXT}</ul><!-- ENDIF -->
+      <!-- IF {PAGE_PAGENAV} -->
+      <ul class="pagination">{PAGE_PAGEPREV}{PAGE_PAGENAV}{PAGE_PAGENEXT}</ul>
+      <!-- ENDIF -->
 <!-- END: MAIN -->

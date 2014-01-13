@@ -2,7 +2,9 @@
       <!-- BEGIN: BEFORE_AJAX -->
       <div id="ajaxBlock">
       <!-- END: BEFORE_AJAX -->
-        <h2>{PM_PAGETITLE}</h2>
+        <div class="page-header">
+          <h1>{PM_PAGETITLE}</h1>
+        </div>
 
         <div class="btn-group">
           <a href="{PM_INBOX_URL}" class="btn btn-sm btn-default<!-- IF {PHP.f} == 'inbox' --> active<!-- ENDIF -->">
@@ -33,7 +35,7 @@
             <thead>
               <th>
                 <!-- IF {PHP.cfg.jquery} -->
-                <input class="checkbox" type="checkbox" value="{PHP.themelang.pm.Selectall}/{PHP.themelang.pm.Unselectall}" onclick="$('.checkbox').attr('checked', this.checked);">
+                <input type="checkbox" value="{PHP.themelang.pm.Selectall}/{PHP.themelang.pm.Unselectall}" onclick="$('input:checkbox').not(this).prop('checked', this.checked);">
                 <!-- ENDIF -->
               </th>
               <th>{PHP.L.Status}</th>
@@ -62,16 +64,16 @@
                 <td>
                   <div class="btn-group">
                     <!-- IF {PM_ROW_EDIT_URL} -->
-                    <a class="btn btn-sm btn-default" href="{PM_ROW_EDIT_URL}"><i class="glyphicon glyphicon-edit"></i> {PHP.L.Edit}</a>
+                    <a class="btn btn-sm btn-default" href="{PM_ROW_EDIT_URL}"><span class="glyphicon glyphicon-edit"></span> {PHP.L.Edit}</a>
                     <!-- ENDIF -->
-                    <a class="btn btn-sm btn-danger" href="{PM_ROW_DELETE_CONFIRM_URL}"><i class="glyphicon glyphicon-remove-circle"></i></a>
+                    <a class="btn btn-sm btn-danger" href="{PM_ROW_DELETE_CONFIRM_URL}"><span class="glyphicon glyphicon-remove-circle"></span></a>
                   </div>
                 </td>
               </tr>
               <!-- END: PM_ROW -->
               <!-- BEGIN: PM_ROW_EMPTY -->
               <tr>
-                <td class="center" colspan="7"><strong>{PHP.L.None}</strong></td>
+                <td colspan="7"><center><strong>{PHP.L.None}</strong></center></td>
               </tr>
               <!-- END: PM_ROW_EMPTY -->
             </tbody>
@@ -87,7 +89,7 @@
               </select>
             </div>
             <div class="col-sm-2">
-              <button type="submit" class="btn btn-sm btn-primary" name="delete">{PHP.L.Confirm}</button>
+              <button type="submit" class="btn btn-primary" name="delete">{PHP.L.Confirm}</button>
             </div>
           </div>
           <!-- IF {PM_PAGES} -->
@@ -96,9 +98,8 @@
           <!-- ENDIF -->
         </form>
         <!-- IF {PHP.cfg.jquery} AND {PHP.cfg.pm.turnajax} -->
-        <script type="text/javascript" src="{PHP.cfg.modules_dir}/pm/js/pm.js"></script>
+        <script src="{PHP.cfg.modules_dir}/pm/js/pm.js"></script>
         <!-- ENDIF -->
-
       <!-- BEGIN: AFTER_AJAX -->
       </div>
       <!-- END: AFTER_AJAX -->

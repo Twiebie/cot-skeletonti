@@ -1,26 +1,25 @@
 <!-- BEGIN: MAIN -->
+      <div class="page-header">
+        <h1>
+          {PAGE_SHORTTITLE}
+          <!-- IF {PHP.usr.isadmin} -->
+          <a href="{PAGE_ADMIN_EDIT_URL}" class="small pull-right">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <!-- ENDIF -->
+        </h1>
+        <p>{PAGE_TITLE}</p>
+      </div>
+
       <div class="row">
         <div class="col-md-8">
-          {PAGE_TITLE}
-          <h3>{PAGE_SHORTTITLE}</h3>
           <!-- IF {PAGE_DESC} -->
-          <span class="text-muted">{PAGE_DESC}</span>
+          <p class="text-muted">{PAGE_DESC}</p>
           <!-- ENDIF -->
-          <p>{PAGE_TEXT}</p>
-          <!-- IF {PHP.cfg.plugin.tags.pages} -->
-          <div class="well well-sm">
-            <strong>{PHP.L.Tags}: </strong>
-            <!-- BEGIN: PAGE_TAGS_ROW -->
-              <!-- IF {PHP.tag_i} > 0 -->, <!-- ENDIF --><a href="{PAGE_TAGS_ROW_URL}" title="{PAGE_TAGS_ROW_TAG}" rel="nofollow">{PAGE_TAGS_ROW_TAG}</a>
-            <!-- END: PAGE_TAGS_ROW -->
-            <!-- BEGIN: PAGE_NO_TAGS -->
-              {PAGE_NO_TAGS}
-            <!-- END: PAGE_NO_TAGS -->
-          </div>
-          <hr>
-          <!-- ENDIF -->
+          {PAGE_TEXT}
           {PAGE_COMMENTS_DISPLAY}
         </div>
+
         <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-heading">{PHP.L.Information}</div>
@@ -33,32 +32,44 @@
               </ul>
               <hr>
               <!-- BEGIN: PAGE_FILE -->
-              <h3>{PHP.L.Download}</h3>
+              <h4>{PHP.L.Download}</h4>
               <!-- BEGIN: MEMBERSONLY -->
-              <h4 class="text-muted" title="{PHP.L.MembersOnly}">{PAGE_FILE_ICON}&nbsp;{PAGE_SHORTTITLE} <small>({PHP.L.MembersOnly})</small></h4>
+              <h4 class="text-muted" title="{PHP.L.MembersOnly}">{PAGE_FILE_ICON} ;{PAGE_SHORTTITLE} <small>({PHP.L.MembersOnly})</small></h4>
               <!-- END: MEMBERSONLY -->
               <!-- BEGIN: DOWNLOAD -->
-              <h4>{PAGE_FILE_ICON}&nbsp;<a href="{PAGE_FILE_URL}">{PAGE_SHORTTITLE}</a></h4>
+              <h4>{PAGE_FILE_ICON} <a href="{PAGE_FILE_URL}">{PAGE_SHORTTITLE}</a></h4>
               <!-- END: DOWNLOAD -->
               <ul class="list-unstyled">
                 <li>{PHP.L.Filesize}: {PAGE_FILE_SIZE}{PHP.L.kb}</li>
                 <li>{PHP.L.Downloaded}: {PAGE_FILE_COUNT}</li>
               </ul>
-              <hr>
               <!-- END: PAGE_FILE -->
 
+              <!-- IF {PAGE_RATINGS_DISPLAY} -->
+              <h4>{PHP.L.Ratings}</h4>
+              {PAGE_RATINGS_DISPLAY}
+              <div class="clearfix"></div>
+              <p>{PHP.L.adm_ratings_totalvotes}: {PAGE_RATINGS_COUNT}</p>
+              <!-- ENDIF -->
+
+              <!-- IF {PHP.cfg.plugin.tags.pages} -->
+              <h4>{PHP.L.Tags}</h4>
+              <ul class="list-inline tag_cloud">
+                <!-- BEGIN: PAGE_TAGS_ROW -->
+                <li>
+                  <a href="{PAGE_TAGS_ROW_URL}" title="{PAGE_TAGS_ROW_TAG}" rel="tag">{PAGE_TAGS_ROW_TAG}</a>
+                </li>
+                <!-- END: PAGE_TAGS_ROW -->
+              </ul>
+              <!-- ENDIF -->
+
               <!-- IF {PAGE_I18N_TRANSLATE} -->
+              <hr>
+              <h4>{PHP.L.Translate}</h4>
               <ul class="list-unstyled">
                 <li><a href="{I18N_LANG_ROW_URL}">{I18N_LANG_ROW_TITLE}</a></li>
                 <li>{PAGE_I18N_TRANSLATE}</li>
                 <li>{PAGE_I18N_DELETE}</li>
-              </ul>
-              <!-- ENDIF -->
-
-              <!-- IF {PAGE_RATINGS_DISPLAY} -->
-              <ul class="list-unstyled">
-                <li>{PAGE_RATINGS_DISPLAY}</li>
-                <li>{PHP.L.adm_ratings_totalvotes}: {PAGE_RATINGS_COUNT}</li>
               </ul>
               <!-- ENDIF -->
 
@@ -79,11 +90,13 @@
                 </ul>
               </div>
               <!-- END: PAGE_ADMIN -->
+
               <!-- BEGIN: PAGE_MULTI -->
-              <h3>{PHP.L.Summary}:</h3>
+              <h4>{PHP.L.Summary}:</h4>
               {PAGE_MULTI_TABTITLES}
               <p>{PAGE_MULTI_TABNAV}</p>
               <!-- END: PAGE_MULTI -->
+
             </div>
           </div>
         </div>

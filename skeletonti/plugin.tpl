@@ -1,4 +1,6 @@
 <!-- BEGIN: MAIN -->
-      <h2>{PLUGIN_TITLE}</h2>
+      <div class="page-header">
+        <h1>{PLUGIN_TITLE}</h1>
+      </div>
       {PLUGIN_BODY}
 <!-- END: MAIN -->

@@ -1,17 +1,26 @@
 <!-- BEGIN: MAIN -->
-      <h2>{PHP.L.tags_Search_tags}</h2>
-      <form action="{TAGS_ACTION}" method="post" class="form-inline" role="form">
-        <div class="form-group">
-          <input type="text" name="t" value="{TAGS_QUERY}" class="form-control">
+      <div class="page-header">
+        <h1>{PHP.L.tags_Search_tags}</h1>
+      </div>
+
+      <form action="{TAGS_ACTION}" method="post" role="form">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <input type="text" name="t" value="{TAGS_QUERY}" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <select name="order" class="form-control">
+                <option value="">{PHP.L.tags_Orderby}</option>
+                <option value="">--</option>
+                {TAGS_ORDER}
+              </select>
+            </div>
+          </div>
+          <input type="submit" class="btn btn-primary" value="{PHP.L.Search}">
         </div>
-        <div class="form-group">
-          <select name="order" class="form-control">
-            <option value="">{PHP.L.tags_Orderby}</option>
-            <option value="">--</option>
-            {TAGS_ORDER}
-          </select>
-        </div>
-        <input type="submit" class="btn btn-primary" value="&raquo;">
       </form>
 
       <!-- BEGIN: TAGS_CLOUD -->

@@ -2,7 +2,9 @@
       <!-- BEGIN: BEFORE_AJAX -->
       <div id="ajaxBlock">
       <!-- END: BEFORE_AJAX -->
-        <h2>{PMSEND_TITLE}</h2>
+        <div class="page-header">
+          <h1>{PMSEND_TITLE}</h1>
+        </div>
 
         <div class="btn-group">
           <a href="{PMSEND_INBOX_URL}" class="btn btn-sm btn-default<!-- IF {PHP.f} == 'inbox' --> active<!-- ENDIF -->">
@@ -42,7 +44,7 @@
               <input type="checkbox" name="fromstate" value="3">{PHP.L.pm_notmovetosentbox}
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">{PHP.L.Submit}</button>
+          <center><button type="submit" class="btn btn-primary">{PHP.L.Submit}</button></center>
         </form>
         <!-- IF {PMSEND_AJAX_MARKITUP} AND {PHP.cfg.pm.turnajax} -->
         <script>

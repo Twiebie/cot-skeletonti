@@ -14,40 +14,42 @@
       {PFS_HEADER_JAVASCRIPT}
       //]]>
     </script>
-    <link href="{PHP.themes_dir}/{PHP.theme}/css/{PHP.scheme}.css" type="text/css" rel="stylesheet">
+    <link href="{PHP.themes_dir}/{PHP.usr.theme}/css/{PHP.scheme}.css" type="text/css" rel="stylesheet">
   </head>
   <body>
   <!-- END: STANDALONE_HEADER -->
-    <h3>{PFS_TITLE}</h3>
-    <p>{PFS_SUBTITLE}</p>
+    <div class="page-header">
+      <h1>{PFS_TITLE}</h1>
+      <p>{PFS_SUBTITLE}</p>
+    </div>
     {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
     <form id="editfolder" action="{PFS_ACTION}" method="post" role="form">
       <div class="form-group">
-        <label class="control-label">{PHP.L.Date}</label>
+        <label>{PHP.L.Date}</label>
         <p>{PFF_DATE}</p>
       </div>
       <div class="form-group">
-        <label class="control-label">{PHP.L.Updated}</label>
+        <label>{PHP.L.Updated}</label>
         <p>{PFF_UPDATED}</p>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label class="control-label">{PHP.L.Folder}</label>
+            <label>{PHP.L.Folder}</label>
             {PFF_TITLE}
           </div>
           <div class="form-group">
-            <label class="control-label">{PHP.L.Description}</label>
+            <label>{PHP.L.Description}</label>
             {PFF_DESC}
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label">{PHP.L.pfs_ispublic}</label>
+        <label>{PHP.L.pfs_ispublic}</label>
         <p>{PFF_ISPUBLIC}</p>
       </div>
       <div class="form-group">
-        <label class="control-label">{PHP.L.pfs_isgallery}</label>
+        <label>{PHP.L.pfs_isgallery}</label>
         <p>{PFF_ISGALLERY}</p>
       </div>
       <button type="submit" class="btn btn-primary">{PHP.L.Update}</button>

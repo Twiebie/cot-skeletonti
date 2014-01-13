@@ -1,5 +1,8 @@
 <!-- BEGIN: MAIN -->
-      <h2>{USERS_EDIT_TITLE}</h2>
+      <div class="page-header">
+        <h1>{USERS_EDIT_TITLE}</h1>
+      </div>
+
       {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
       <form action="{USERS_EDIT_SEND}" method="post" name="useredit" enctype="multipart/form-data" role="form">
         <input type="hidden" name="id" value="{USERS_EDIT_ID}">

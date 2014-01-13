@@ -1,6 +1,13 @@
 <!-- BEGIN: MAIN -->
-      <h2><a href="{PHP|cot_url('plug','e=whosonline')}">{PHP.L.WhosOnline}</a></h2>
-      <p><strong>{PHP.L.NowOnline}:</strong> <!-- IF {STAT_COUNT_USERS} -->{STAT_COUNT_USERS} {USERS}, <!-- ENDIF --><!-- IF !{PHP.cfg.plugin.whosonline.disable_guests} -->{STAT_COUNT_GUESTS} {GUESTS}<!-- ENDIF --></p>
+      <div class="page-header">
+        <h1>{PHP.L.WhosOnline}</h1>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>{PHP.L.NowOnline}:</strong>
+        <!-- IF {STAT_COUNT_USERS} -->{STAT_COUNT_USERS} {USERS}<!-- ENDIF -->
+        <!-- IF !{PHP.cfg.plugin.whosonline.disable_guests} -->, {STAT_COUNT_GUESTS} {GUESTS}.<!-- ENDIF -->
+      </div>
       <div class="table-responsive">
         <table class="table table-hover">
           <thead>
@@ -33,7 +40,7 @@
           </tbody>
         </table>
       </div>
-      <!-- IF {WHO_TOTALPAGES} > 1 -->
+      <!-- IF {WHO_PAGINATION} -->
       <ul class="pagination">{WHO_PAGEPREV}{WHO_PAGINATION}{WHO_PAGENEXT}</p>
       <p>{PHP.L.Page} {WHO_CURRENTPAGE} {PHP.L.Of} {WHO_TOTALPAGES}</p>
       <!-- ENDIF -->

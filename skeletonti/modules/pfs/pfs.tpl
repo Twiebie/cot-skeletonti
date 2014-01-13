@@ -14,12 +14,14 @@
       {PFS_HEADER_JAVASCRIPT}
       //]]>
     </script>
-    <link href="{PHP.themes_dir}/{PHP.theme}/css/{PHP.scheme}.css" type="text/css" rel="stylesheet">
+    <link href="{PHP.themes_dir}/{PHP.usr.theme}/css/{PHP.scheme}.css" type="text/css" rel="stylesheet">
   </head>
   <body>
   <!-- END: STANDALONE_HEADER -->
-    <h2>{PFS_TITLE} {PFS_PATH}</h2>
-    <!-- IF {PFS_SUBTITLE} -->{PFS_SUBTITLE}<!-- ENDIF -->
+    <div class="page-header">
+      <h1>{PFS_TITLE} {PFS_PATH}</h1>
+      <!-- IF {PFS_SUBTITLE} --><p>{PFS_SUBTITLE}</p><!-- ENDIF -->
+    </div>
 
     <!-- BEGIN: PFS_ERRORS -->
     <ul class="list-unstyled">
@@ -48,7 +50,9 @@
       <tbody>
         <!-- BEGIN: PFF_ROW -->
         <tr>
-          <td class="center middle"><a href="{PFF_ROW_URL}">{PFF_ROW_ICON}</a></td>
+          <td class="middle">
+            <center><a href="{PFF_ROW_URL}">{PFF_ROW_ICON}</a></center>
+          </td>
           <td>
             <a href="{PFF_ROW_URL}">{PFF_ROW_TITLE}</a>
             <p class="text-muted">{PFF_ROW_DESC}</p>
@@ -59,8 +63,8 @@
           <td>{PFF_ROW_UPDATED}</td>
           <td>
             <div class="btn-group">
-              <a href="{PFF_ROW_EDIT_URL}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-edit"></i> {PHP.L.Edit}</a>
-              <a href="{PFF_ROW_DELETE_URL}" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove-circle"></i></a>
+              <a href="{PFF_ROW_EDIT_URL}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-edit"></span> {PHP.L.Edit}</a>
+              <a href="{PFF_ROW_DELETE_URL}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>
             </div>
           </td>
         </tr>
@@ -90,7 +94,9 @@
       <tbody>
         <!-- BEGIN: PFS_ROW -->
         <tr>
-          <td class="center middle">{PFS_ROW_ICON}</td>
+          <td class="middle">
+            <center>{PFS_ROW_ICON}</center>
+          </td>
           <td>
             <h4><a href="{PFS_ROW_FILE_URL}">{PFS_ROW_FILE}</a></h4>
             <p class="text-muted">{PFS_ROW_TYPE} / {PFS_ROW_DESC}</p>
@@ -102,8 +108,8 @@
             <input type="checkbox" name="folderid[{PFS_ROW_ID}]">
             <div class="btn-group">
               {PFS_ROW_INSERT}
-              <a href="{PFS_ROW_EDIT_URL}" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-edit"></i> {PHP.L.Edit}</a>
-              <a href="{PFS_ROW_DELETE_URL}" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove-circle"></i></a>
+              <a href="{PFS_ROW_EDIT_URL}" class="btn btn-sm btn-default"><span class="glyphicon glyphicon-edit"></span> {PHP.L.Edit}</a>
+              <a href="{PFS_ROW_DELETE_URL}" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>
             </div>
           </td>
         </tr>
@@ -136,7 +142,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <label class="control-label">{PHP.L.Folder}</label>
+                <label>{PHP.L.Folder}</label>
                 {PFS_UPLOAD_FORM_FOLDERS}
               </div>
             </div>
@@ -145,7 +151,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <label class="control-label">{PHP.L.Description}</label>
+                <label>{PHP.L.Description}</label>
                 <div class="input-group">
                   <span class="input-group-addon">{PFS_UPLOAD_FORM_ROW_NUM}</span>
                   <input type="text" name="ndesc[{PFS_UPLOAD_FORM_ROW_ID}]" class="form-control" value="" size="40" maxlength="255">
@@ -154,7 +160,7 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">{PHP.L.File}</label>
+                <label>{PHP.L.File}</label>
                 <input type="file" name="userfile[{PFS_UPLOAD_FORM_ROW_ID}]" size="24">
               </div>
             </div>
@@ -180,7 +186,7 @@
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label class="control-label">{PHP.L.Description}</label>
+                <label>{PHP.L.Description}</label>
                 <input type="text" name="ndesc" class="form-control" value="" size="32" maxlength="255">
               </div>
             </div>
@@ -190,7 +196,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <label class="control-label">{PHP.L.pfs_parentfolder}</label>
+                <label>{PHP.L.pfs_parentfolder}</label>
                 {NEWFOLDER_FORM_INPUT_PARENT}
               </div>
             </div>
@@ -232,13 +238,13 @@
         <div class="panel-heading">
           <h4 class="panel-title">
             <a data-toggle="collapse" href="#pfs-allowed">
-              {PHP.L.pfs_extallowed}
+              {PHP.L.pfs_extallowed} <span class="caret"></span>
             </a>
           </h4>
         </div>
         <div id="pfs-allowed" class="panel-collapse collapse">
           <div class="panel-body">
-            <table class="table">
+            <table class="table table-borderless">
               <!-- BEGIN: ALLOWED_ROW -->
               <tr>
                 <td>{ALLOWED_ROW_ICON} {ALLOWED_ROW_EXT}</td>

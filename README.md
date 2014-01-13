@@ -1,5 +1,5 @@
 # Skeletonti #
-A very basic development theme for [Cotonti](http://www.cotonti.com/) Siena, built with [Bootstrap](http://getbootstrap.com/) 3.
+A very basic development theme for [Cotonti Siena](http://www.cotonti.com/), built with [Bootstrap 3](http://getbootstrap.com/).
 
 ## Installation ##
 1. Place the folder 'skeletonti' in your Cotonti themes folder.
@@ -11,4 +11,4 @@ Useful information on that and other relevant topics is available at [http://www
 
 More information on how to use Bootstrap can be found here: [http://getbootstrap.com](http://getbootstrap.com)
 
-![](http://www.cotonti.com/datas/photos/page_613.jpg)
+![](http://www.cotonti.com/datas/photos/page_613.png)

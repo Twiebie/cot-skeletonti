@@ -12,12 +12,12 @@
         </div>
         <!-- ENDIF -->
         <!-- IF {RECENT_PAGES} -->
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4 pagerow">
           {RECENT_PAGES}
         </div>
         <!-- ENDIF -->
         <!-- IF {RECENT_FORUMS} -->
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4 pagerow">
           {RECENT_FORUMS}
         </div>
         <!-- ENDIF -->

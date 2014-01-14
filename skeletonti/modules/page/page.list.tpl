@@ -1,26 +1,30 @@
 <!-- BEGIN: MAIN -->
       <div class="page-header">
-        <h1>{LIST_CATTITLE}</h1>
+        <h1>
+          {LIST_CATTITLE}
+          <small><!-- IF {LIST_CATDESC} -->{LIST_CATDESC}<!-- ENDIF --></small>
+        </h1>
+        <!-- IF {LIST_CATSHORTPATH} --><p>{LIST_CATPATH}</p><!-- ENDIF -->
       </div>
 
       <div class="row">
-        <div class="col-md-8 pagerow">
+        <div class="col-md-8">
           <!-- BEGIN: LIST_ROW -->
-          <h3>
-            <a href="{LIST_ROW_URL}">{LIST_ROW_SHORTTITLE}</a>
-            <!-- IF {PHP.usr.isadmin} -->
-            <a href="{LIST_ROW_ADMIN_EDIT_URL}" class="small pull-right">
-              <span class="glyphicon glyphicon-edit"></span>
-            </a>
-            <!-- ENDIF -->
-          </h3>
-          <!-- IF {LIST_ROW_DESC} -->
-          <p class="text-muted">{LIST_ROW_DESC}</p>
-          <!-- ENDIF -->
-          {LIST_ROW_TEXT_CUT}
-          <!-- IF {LIST_ROW_TEXT_IS_CUT} -->
-          <a href="{LIST_ROW_URL}" class="btn btn-primary">{PHP.L.ReadMore}</a>
-          <!-- ENDIF -->
+          <div class="media">
+            <div class="media-body">
+              <h3 class="media-heading">
+                <a href="{LIST_ROW_URL}">{LIST_ROW_SHORTTITLE}</a>
+                <!-- IF {PHP.usr.isadmin} -->
+                <a href="{LIST_ROW_ADMIN_EDIT_URL}" class="small pull-right">
+                  <i class="fa fa-pencil-square-o"></i>
+                </a>
+                <!-- ENDIF -->
+              </h3>
+              <!-- IF {LIST_ROW_DESC} --><p class="text-muted">{LIST_ROW_DESC}</p><!-- ENDIF -->
+              {LIST_ROW_TEXT_CUT}
+              <!-- IF {LIST_ROW_TEXT_IS_CUT} --><a href="{LIST_ROW_URL}" class="btn btn-primary">{PHP.L.ReadMore}</a><!-- ENDIF -->
+            </div>
+          </div>
           <!-- END: LIST_ROW -->
           <!-- IF {LIST_TOP_PAGINATION} -->
           <ul class="pagination">{LIST_TOP_PAGEPREV}{LIST_TOP_PAGINATION}{LIST_TOP_PAGENEXT}</ul>
@@ -44,6 +48,7 @@
           <!-- ENDIF -->
 
           <!-- IF {LIST_TAG_CLOUD} -->
+          <div class="clearfix"></div>
           <h4>{PHP.L.Tags}</h4>
           {LIST_TAG_CLOUD}
           <!-- ENDIF -->

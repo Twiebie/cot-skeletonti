@@ -1,7 +1,7 @@
 <?php defined('COT_CODE') or die('Wrong URL.');
 /* ====================
 [BEGIN_COT_THEME]
-Name=Skeletonti v1.3
+Name=Skeletonti v1.3.1
 Schemes=skeletonti:Default
 [END_COT_THEME]
 ==================== */
@@ -9,7 +9,7 @@ Schemes=skeletonti:Default
 /**
  * Skeletonti
  *
- * @package Cotonti
+ * @package Skeletonti
  * @author Twiebie
  * @copyright Copyright (c) 2013-2014 Cotonti Team, Twiebie
  * @license BSD
@@ -67,6 +67,6 @@ $R['users_input_grplist_checkbox'] = '<div class="checkbox-inline"><input type="
 $R['users_input_grplist_radio']    = '<div class="radio-inline"><input type="radio" title="'.$L['Maingroup'].'" name="{$name}" value="{$value}"{$checked}{$attrs}></div>';
 
 // PFS icons
-$R['pfs_link_addpix'] = '<a href="javascript:addpix(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-picture"></i></a>';
+$R['pfs_link_addpix']   = '<a href="javascript:addpix(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-picture"></i></a>';
 $R['pfs_link_addthumb'] = '<a href="javascript:addthumb(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-th-large"></i></a>';
-$R['pfs_link_addfile'] = '<a href="javascript:addfile(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-file"></i></a>';
+$R['pfs_link_addfile']  = '<a href="javascript:addfile(\'{$pfs_file}\',\'{$c2}\',\'{$pfs_desc}\')" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-file"></i></a>';

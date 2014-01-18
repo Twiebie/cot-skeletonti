@@ -11,14 +11,20 @@
           {INDEX_NEWS}
         </div>
         <!-- ENDIF -->
-        <!-- IF {RECENT_PAGES} -->
-        <div class="col-sm-6 col-md-4 pagerow">
-          {RECENT_PAGES}
-        </div>
-        <!-- ENDIF -->
-        <!-- IF {RECENT_FORUMS} -->
-        <div class="col-sm-6 col-md-4 pagerow">
-          {RECENT_FORUMS}
+        <!-- IF {RECENT_PAGES} OR {RECENT_FORUMS} -->
+        <div class="col-sm-5 col-md-4">
+          <div class="row">
+            <!-- IF {RECENT_PAGES} -->
+            <div class="col-sm-12 pagerow">
+              {RECENT_PAGES}
+            </div>
+            <!-- ENDIF -->
+            <!-- IF {RECENT_FORUMS} -->
+            <div class="col-sm-12 pagerow">
+              {RECENT_FORUMS}
+            </div>
+            <!-- ENDIF -->
+          </div>
         </div>
         <!-- ENDIF -->
       </div>

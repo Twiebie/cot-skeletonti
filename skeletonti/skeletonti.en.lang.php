@@ -2,7 +2,7 @@
 /**
  * Skeletonti English language
  *
- * @package Cotonti
+ * @package Skeletonti
  * @author Twiebie
  * @copyright Copyright (c) 2013-2014 Cotonti Team, Twiebie
  * @license BSD

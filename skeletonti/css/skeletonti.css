@@ -1,23 +1,9 @@
-/*
- * Skeletonti stylesheet
- */
-
-.left {
-  text-align: left;
-}
-
-.right {
-  text-align: right;
-}
-
 /* Header */
-
 .nav-login {
   padding: 15px;
 }
 
 /* Tables */
-
 .middle,
 .table > thead > tr > th.middle,
 .table > tbody > tr > th.middle,
@@ -29,14 +15,12 @@
 }
 
 /* Borderless table */
-
 .table.table-borderless td,
 .table.table-borderless th {
   border-top: 0;
 }
 
 /* Fix for main group list item in users profile. */
-
 li.list-group-item.active,
 li.list-group-item.active a {
   color: #fff;
@@ -45,7 +29,6 @@ li.list-group-item.active a {
 }
 
 /* Pages */
-
 .pagerow h3:first-child {
   margin-top: 0;
 }
@@ -59,7 +42,6 @@ li.list-group-item.active a {
 }
 
 /* Forums */
-
 .forums-tab .list-unstyled li {
   padding: 5px;
 }
@@ -83,7 +65,6 @@ li.list-group-item.active a {
 }
 
 /* Error (error.tpl) */
-
 .errortpl {
   margin-top: 50px;
 }

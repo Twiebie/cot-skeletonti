@@ -10,8 +10,8 @@
     <title>{MESSAGE_TITLE}</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link href="{PHP.cfg.themes_dir}/{PHP.usr.theme}/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <link href="{PHP.cfg.themes_dir}/{PHP.usr.theme}/css/{PHP.usr.theme}.css" type="text/css" rel="stylesheet">
+    <link href="{PHP.cfg.themes_dir}/{PHP.usr.theme}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{PHP.cfg.themes_dir}/{PHP.usr.theme}/css/{PHP.usr.theme}.css" rel="stylesheet">
   </head>
   <body>
     <div class="container errortpl">

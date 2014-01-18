@@ -2,7 +2,7 @@
 /**
  * Skeletonti CSS and JavaScript loader
  *
- * @package Cotonti
+ * @package Skeletonti
  * @author Twiebie
  * @copyright Copyright (c) 2013-2014 Cotonti Team, Twiebie
  * @license BSD
@@ -16,4 +16,4 @@ cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/css/skeletonti.css');
 
 // JavaScript
 cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/js/bootstrap.js');
-cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/js/js.js');
+cot_rc_add_file($cfg['themes_dir'].'/'.$usr['theme'].'/js/skeletonti.js');

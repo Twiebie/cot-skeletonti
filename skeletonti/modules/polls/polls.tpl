@@ -124,7 +124,7 @@
       <tr>
         <td>{POLL_DATE}</td>
         <td><a href="{POLL_HREF}">{POLL_TEXT}</a></td>
-        <td class="right">{POLLS_COMMENTS}</td>
+        <td class="text-right">{POLLS_COMMENTS}</td>
       </tr>
       <!-- END: POLL_ROW -->
       <!-- BEGIN: POLL_NONE -->

@@ -3,10 +3,10 @@
       <div id="ajaxBlock">
       <!-- END: BEFORE_AJAX -->
         <div class="page-header">
-          <h1>{PM_PAGETITLE}</h1>
+          <h3>{PM_PAGETITLE}</h3>
         </div>
 
-        <table class="table">
+        <table class="table table-condensed">
           <tr>
             <td>{PHP.L.Subject}:</td>
             <td>{PM_TITLE}</td>
@@ -26,9 +26,9 @@
           <tr>
             <td>{PHP.L.Action}:</td>
             <td>
-              <ul class="list-inline">
-                <li>{PM_QUOTE}</li>
-                <li>{PM_EDIT}</li>
+              <ul class="nav nav-pills">
+                <li class="">{PM_QUOTE}</li>
+                <li class="">{PM_EDIT}</li>
                 <li>{PM_DELETE}<li>
                 <li>{PM_HISTORY}</li>
               </ul>
@@ -37,7 +37,7 @@
         </table>
 
         <!-- BEGIN: REPLY -->
-        <h3>{PHP.L.pm_replyto}</h3>
+        <h4>{PHP.L.pm_replyto}</h4>
         <form action="{PM_FORM_SEND}" method="post" name="newlink" role="form">
           <div class="row">
             <div class="col-md-6">

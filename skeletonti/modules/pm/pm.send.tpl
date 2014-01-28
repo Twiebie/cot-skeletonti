@@ -3,7 +3,7 @@
       <div id="ajaxBlock">
       <!-- END: BEFORE_AJAX -->
         <div class="page-header">
-          <h1>{PMSEND_TITLE}</h1>
+          <h3>{PMSEND_TITLE}</h3>
         </div>
 
         <div class="btn-group">
